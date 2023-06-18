@@ -1,0 +1,9 @@
+*.kicad_pcb
+*backups/
+datasheets/
+.DS_Store
+*.zip
+*.drl
+*.gbr
+_*.*
+
