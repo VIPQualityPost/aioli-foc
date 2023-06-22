@@ -1,0 +1,344 @@
+81723643253257
+matei
+01x05_sidemount
+Unnamed1 StepUp generated footprint
+
+0
+5
+5
+matei
+02x05_sidemount
+Unnamed1 StepUp generated footprint
+
+0
+10
+10
+matei
+918-418K2022Y40004
+Unnamed StepUp generated footprint
+
+0
+28
+25
+matei
+AVX-009159010061911
+Unnamed StepUp generated footprint
+
+0
+10
+10
+matei
+BM254P2V53
+BM25-4P/2-V(53)-4
+Connector
+0
+10
+10
+matei
+BM254S2V53
+BM25-4S/2-V(53)-1
+Connector
+0
+16
+16
+matei
+C707 10M008 612 2
+C707_10M008_612_2 StepUp generated footprint
+
+0
+10
+6
+matei
+D3SH
+D3SH StepUp generated footprint
+
+0
+2
+2
+matei
+D3SH-boss
+D3SH StepUp generated footprint
+
+0
+2
+2
+matei
+DC-IN-TH_DC-005-5A-2.0-SMT-C319134
+
+
+0
+4
+3
+matei
+FPC-SMD_3P-P1.00_HDGC_1.0K-LS-3PWB-BOTTOMCONTACT
+
+
+0
+5
+5
+matei
+FPC-SMD_3P-P1.00_HDGC_1.0K-MX-3PWB-TOPCONTACT
+
+
+0
+5
+5
+matei
+FPC-SMD_3P-P1.00_HDGC_1.0K-N-3PB
+
+
+0
+5
+5
+matei
+FrameworkExpansionCard
+
+
+0
+24
+23
+matei
+FrameworkExpansionCardUSBC
+
+
+0
+24
+23
+matei
+GC9A01Round1.28
+
+
+0
+12
+12
+matei
+JS202011JCQN
+JS202011SCQN StepUp generated footprint
+
+0
+6
+6
+matei
+JS202011SCQN
+Unnamed StepUp generated footprint
+
+0
+6
+6
+matei
+JST-XH-edgemount-2p
+JST_XH_edgemount_2p StepUp generated footprint
+
+0
+2
+2
+matei
+LAHeader_HP01650-63203
+Through hole straight pin header, 2x10, 2.54mm pitch, double rows
+Through hole pin header THT 2x10 2.54mm double row
+0
+20
+20
+matei
+MODULE_TMC2208_SILENTSTEPSTICK
+
+
+0
+19
+19
+matei
+MOLEX_502570-0893
+
+
+0
+14
+14
+matei
+MagnTek TSSOP-16-1EP_4.4x5mm_P0.65mm
+FE Package; 16-Lead Plastic TSSOP (4.4mm); Exposed Pad Variation BB; (see Linear Technology 1956f.pdf)
+SSOP 0.65
+0
+16
+16
+matei
+PTS526 SKG15 SMTR2 LFS
+Unnamed StepUp generated footprint
+
+0
+4
+2
+matei
+QFN40P700X700X90-57N
+
+
+0
+57
+57
+matei
+RETRODE_SLOT
+
+
+0
+62
+62
+matei
+SAMTEC_PCIE-064-02-X-D-TH
+PCI EXPRESS CARD CONNECTOR ,64 PINS.
+
+0
+64
+64
+matei
+SAMTEC_PCIE-098-02-X-D-TH
+PCI EXPRESS CARD CONNECTOR ,64 PINS.
+
+0
+98
+98
+matei
+SNES-CONN-EXP
+
+
+0
+62
+62
+matei
+SNESCART
+
+
+0
+46
+46
+matei
+SNESCART_EXT
+
+
+0
+62
+62
+matei
+SNES_Edge_EXT
+
+
+0
+62
+62
+matei
+SNES_logicadapter
+Unnamed StepUp generated footprint
+
+0
+0
+0
+matei
+SWD_pogo_PCB
+Unnamed StepUp generated footprint
+
+0
+0
+0
+matei
+SWD_pogo_combined
+SWD_pogo StepUp generated footprint
+
+0
+6
+6
+matei
+SWD_pogo_landing
+SWD_pogo_landing StepUp generated footprint
+
+0
+6
+6
+matei
+TS-1187A-B-A-B
+TS_1187A_B_A_B StepUp generated footprint
+
+0
+4
+2
+matei
+antenna-300-500MHz
+antenna StepUp generated footprint
+
+0
+2
+2
+matei
+helical-antenna-300-500MHz
+Unnamed StepUp generated footprint
+
+0
+16
+1
+matei
+magnetic-encoder-v1
+Unnamed StepUp generated footprint
+
+0
+3
+1
+matei
+oyster_silk
+
+
+0
+0
+0
+matei
+oysters
+
+
+0
+0
+0
+matei
+pogo_01x03
+Unnamed StepUp generated footprint
+
+0
+3
+3
+matei
+pogo_02x03
+Unnamed StepUp generated footprint
+
+0
+6
+6
+matei
+snescart_connector
+snescart StepUp generated footprint
+
+0
+46
+24
+matei
+snescart_full
+snescart StepUp generated footprint
+
+0
+46
+24
+matei
+snescart_top
+snescart StepUp generated footprint
+
+0
+0
+0
+matei
+test
+
+
+0
+0
+0
+matei
+usb-PCB
+
+
+0
+4
+4
