@@ -1346,7 +1346,7 @@
   )
 
   (symbol (lib_id "Device:R_Small_US") (at 160.02 83.82 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid e1071173-896c-42fa-ba4a-fc177d3083ff)
     (property "Reference" "R601" (at 162.56 82.55 0)
       (effects (font (size 1.27 1.27)) (justify left))
