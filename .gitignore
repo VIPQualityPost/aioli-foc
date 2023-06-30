@@ -4,6 +4,8 @@
 *assembly/
 *datasheets/
 .DS_Store
+.pio/
+.vscode/
 *.zip
 *.drl
 *.gbr
