@@ -1,5 +1,4 @@
-#include "drv_reset.h"
-#include "main.h"
+#include "stm32g4xx_hal_conf.h"
 
 void perform_system_reset( void )
 {

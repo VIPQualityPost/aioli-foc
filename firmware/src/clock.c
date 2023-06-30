@@ -1,3 +1,5 @@
+#include "pins_arduino.h"
+
 /**
   * @brief System Clock Configuration
   * @retval None
