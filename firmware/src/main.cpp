@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <Spi.h>
+#include "STM32_CAN.h"
 #include <SimpleFOC.h>
 #include <SimpleFOCDrivers.h>
 #include "encoders/MT6701/MagneticSensorMT6701SSI.h"
@@ -13,9 +14,14 @@
 #define RPHASE 1.4
 #define MOTORKV 1000
 
+#define CAN_ID 0x100
+
 BLDCDriver3PWM driver = BLDCDriver3PWM(U_PWM, V_PWM, W_PWM, U_EN, V_EN, W_EN);
 BLDCMotor motor = BLDCMotor(POLEPAIRS, RPHASE, MOTORKV);
 MagneticSensorMT6701SSI enc(ENC_CS);
+STM32_CAN Can(CAN1, ALT); 
+
+static CAN_message_t CAN_TXmsg;
 
 #ifdef HAS_COMMANDER
 Commander commander = Commander(Serial);
@@ -34,6 +40,11 @@ void setup() {
  
   // For our jump-to-bootloader program.
   pinMode(DFU_PIN,INPUT);
+
+  Can.begin();
+  Can.setFilter(0, 0x100, 0x1FFFFFFF);
+  Can.setBaudRate(115200);
+
 
   // Encoder initialization.
   // Encoder on SPI1
@@ -86,4 +97,8 @@ void loop() {
   commander.run();
   motor.monitor();
   #endif
+
+  if(Can.read(CAN_msg)){
+
+  }
 }
