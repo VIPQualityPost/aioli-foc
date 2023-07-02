@@ -6,6 +6,7 @@
 .DS_Store
 .pio/
 .vscode/
+*/fp-info-cache
 *.zip
 *.drl
 *.gbr
