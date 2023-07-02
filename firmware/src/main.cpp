@@ -70,7 +70,17 @@ uint8_t configureFOC(){
 	// Encoder on SPI1
 	enc.init();
 	motor.linkSensor(&enc);
+	// Encoder initialization.
+	// Encoder on SPI1
+	enc.init();
+	motor.linkSensor(&enc);
 
+	// Driver initialization.
+	driver.pwm_frequency = 20000;
+	driver.voltage_power_supply = 5;
+	driver.voltage_limit = 3;
+	driver.init();
+	motor.linkDriver(&driver);
 	// Driver initialization.
 	driver.pwm_frequency = 20000;
 	driver.voltage_power_supply = 5;
@@ -85,7 +95,20 @@ uint8_t configureFOC(){
 	motor.PID_velocity.output_ramp = 100;
 	motor.LPF_velocity.Tf = 0.5;
 	motor.LPF_angle.Tf = 0; // try to avoid
+	// Motor PID parameters.
+	motor.PID_velocity.P = 0.2;
+	motor.PID_velocity.I = 3;
+	motor.PID_velocity.D = 0.002;
+	motor.PID_velocity.output_ramp = 100;
+	motor.LPF_velocity.Tf = 0.5;
+	motor.LPF_angle.Tf = 0; // try to avoid
 
+	// Motor initialization.
+	motor.voltage_sensor_align = 2;
+	motor.current_limit = 0.5;
+	motor.velocity_limit = 20;
+	motor.controller = MotionControlType::angle;
+	motor.foc_modulation = FOCModulationType::SinePWM;
 	// Motor initialization.
 	motor.voltage_sensor_align = 2;
 	motor.current_limit = 0.5;
