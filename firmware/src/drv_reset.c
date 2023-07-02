@@ -1,4 +1,5 @@
 #include "stm32g4xx_hal_conf.h"
+#include "stm32g4xx_hal_rcc.h"
 
 void perform_system_reset( void )
 {
