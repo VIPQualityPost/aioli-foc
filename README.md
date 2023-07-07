@@ -4,4 +4,5 @@ Small, low current (I) closed loop simpleFOC driver board, that can be assembled
 
 The target for this project was to create an all-in-one simpleFOC board with high resolution magnetic encoder, better MCU than the previous STM32F103, CANBUS for multi board communication, and be assembled with top-side only components. The board is 4 layers (which at this size, does not add any cost over the 2-layers). Additionally, it has a compact size of 40x40mm. 
 
-![3D render of PCB](/render.png)
+![Photo of PCB](/single.jpg)
+![Photo of PCBs](/many.jpg)
