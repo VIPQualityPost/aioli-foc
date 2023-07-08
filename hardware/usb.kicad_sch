@@ -1081,7 +1081,7 @@
     (uuid 3309461f-9ec9-4f09-8ce5-3188505d8775)
   )
 
-  (hierarchical_label "USB_M" (shape bidirectional) (at 135.89 96.52 0) (fields_autoplaced)
+  (hierarchical_label "USB_M" (shape bidirectional) (at 135.89 86.36 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 2125bf52-4de5-4c83-b2d1-1b966fb8f338)
   )
@@ -1089,7 +1089,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 2f0b02ba-95ad-491b-935d-34e1ba51eb53)
   )
-  (hierarchical_label "USB_P" (shape bidirectional) (at 135.89 86.36 0) (fields_autoplaced)
+  (hierarchical_label "USB_P" (shape bidirectional) (at 135.89 96.52 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 7ad9da69-8e95-4231-8344-13e4d12fc830)
   )
