@@ -1,3 +1,3 @@
-[submodule "--force"]
+[submodule "firmware/lib/Adafruit_GC9A01A"]
 	path = firmware/lib/Adafruit_GC9A01A
 	url = https://github.com/adafruit/Adafruit_GC9A01A.git
