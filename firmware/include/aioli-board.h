@@ -37,4 +37,4 @@
 
 //MISC
 #define USER_LED    PA7
-#define DFU_PIN     PC4
+#define USER_BUTTON PC4
