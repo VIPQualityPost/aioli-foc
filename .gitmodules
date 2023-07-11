@@ -1,0 +1,3 @@
+[submodule "--force"]
+	path = firmware/lib/Adafruit_GC9A01A
+	url = https://github.com/adafruit/Adafruit_GC9A01A.git
