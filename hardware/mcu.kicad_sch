@@ -2107,7 +2107,7 @@
   )
 
   (symbol (lib_id "Device:C_Small") (at 236.22 91.44 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp yes)
     (uuid 202297d6-3bc0-400d-becc-daae3dafd2be)
     (property "Reference" "C207" (at 233.68 90.1763 0)
       (effects (font (size 1.27 1.27)) (justify right))

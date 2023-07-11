@@ -758,7 +758,7 @@
   )
 
   (symbol (lib_id "matei:GC9A01") (at 132.08 90.17 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 92ca0b61-6fb5-4ff2-807a-d51d868bce4b)
     (property "Reference" "U?" (at 123.19 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left))

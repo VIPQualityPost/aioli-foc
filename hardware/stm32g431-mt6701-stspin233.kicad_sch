@@ -1493,7 +1493,7 @@
   )
 
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 200.66 143.51 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 34f8821f-a849-4324-920f-b961de31469d)
     (property "Reference" "H102" (at 203.2 140.97 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1518,7 +1518,7 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 109.22 143.51 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 3bb3b7d2-c6d3-4b6c-bcc0-c6254815663e)
     (property "Reference" "J107" (at 109.22 137.16 0)
       (effects (font (size 1.27 1.27)))
@@ -1573,7 +1573,7 @@
   )
 
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 191.77 143.51 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 77883b0a-3dbd-4c4a-8c84-5e77d847e57d)
     (property "Reference" "H101" (at 194.31 140.97 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1626,7 +1626,7 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_02x05_Top_Bottom") (at 36.83 116.84 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 81128832-cc31-4834-8536-f23fb4e71c59)
     (property "Reference" "J104" (at 38.1 125.73 0)
       (effects (font (size 1.27 1.27)))
@@ -1660,7 +1660,7 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 234.95 38.1 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 849a7404-a516-42ec-a5cc-8f7ca3bb1216)
     (property "Reference" "J109" (at 237.49 36.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1825,7 +1825,7 @@
   )
 
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 209.55 143.51 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a33b5e5f-67af-41d7-8ecf-e72fa6630986)
     (property "Reference" "H103" (at 212.09 140.97 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1850,7 +1850,7 @@
   )
 
   (symbol (lib_id "Mechanical:MountingHole_Pad") (at 218.44 143.51 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c89ec55e-831c-474c-a03b-0eedfbf68a6f)
     (property "Reference" "H104" (at 220.98 140.97 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1875,7 +1875,7 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 55.88 129.54 90) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid c9f3193b-7713-4493-89e6-da4e9c0b839f)
     (property "Reference" "J106" (at 63.5 128.27 90)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1901,7 +1901,7 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 234.95 49.53 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid d86af6d0-7785-4145-856f-ef5cd0511201)
     (property "Reference" "J110" (at 237.49 50.8 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1928,7 +1928,7 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_02x05_Top_Bottom") (at 36.83 97.79 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dfcee3c0-e1fc-450b-a7ec-a1b69a38423c)
     (property "Reference" "J103" (at 38.1 86.36 0)
       (effects (font (size 1.27 1.27)))
