@@ -1,9 +1,6 @@
 
 *backups/
-*gerbers/
-*assembly/
-*datasheets/
-.DS_Store
+*.DS_Store
 .pio/
 .vscode/
 */fp-info-cache
