@@ -1,12 +1,15 @@
 #include <Arduino.h>
 #include <Spi.h>
+
 #include <SimpleFOC.h>
 #include <SimpleFOCDrivers.h>
 #include "encoders/MT6701/MagneticSensorMT6701SSI.h"
 
-#include "./drv_reset.h"
-#include "./aioli-board.h"
-// #include "./can.cpp"
+#include "stm32g4xx_hal_fdcan.h"
+
+#include "can.h"
+#include "drv_reset.h"
+#include "aioli-board.h"
 
 // Motor specific parameters.
 #define POLEPAIRS 4
@@ -23,14 +26,14 @@ BLDCMotor motor = BLDCMotor(POLEPAIRS, RPHASE, MOTORKV);
 MagneticSensorMT6701SSI enc = MagneticSensorMT6701SSI(ENC_CS);
 Commander commander = Commander(SerialUSB);
 
+// CAN
+FDCAN_HandleTypeDef hfdcan1;
+enum canSpeed canBusSpeed = MBit1;
+
+// Prototypes
 uint8_t configureFOC(void);
 uint8_t configureCAN(void);
 uint8_t configureDFU(void);
-
-void doMotor(char *cmd)
-{
-	commander.motor(&motor, cmd);
-}
 
 void setup()
 {
@@ -50,17 +53,14 @@ void loop()
 	motor.move();
 	commander.run();
 
-	// if(pendingFrame){
-	// 	commander.run((char*)sfocCmdStr);
-	// 	pendingFrame = 0;
-	// }
-	// else{
-	// 	commander.run();
-	// }
-
 	#ifdef HAS_MONITOR
 	motor.monitor();
 	#endif
+}
+
+void doMotor(char *cmd)
+{
+	commander.motor(&motor, cmd);
 }
 
 uint8_t configureFOC(){
@@ -114,10 +114,10 @@ uint8_t configureFOC(){
 }
 
 uint8_t configureCAN(){
-	return 0;
+	return FDCAN_Init(hfdcan1);
 }
 
 uint8_t configureDFU(){
-	
+	jump_to_bootloader();
 	return 1;
 }
