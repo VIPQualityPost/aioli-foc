@@ -5,9 +5,11 @@
 #include <SimpleFOCDrivers.h>
 #include "encoders/MT6701/MagneticSensorMT6701SSI.h"
 
+#include "stm32g4xx_hal_conf.h"
 #include "stm32g4xx_hal_fdcan.h"
 
 #include "can.h"
+#include "canprofile.h"
 #include "drv_reset.h"
 #include "aioli-board.h"
 
@@ -17,8 +19,6 @@
 #define MOTORKV 1000
 
 uint8_t useDFU = 0;
-uint8_t pendingFrame = 0;
-uint8_t sfocCmdStr;
 
 // simpleFOC constructors
 BLDCDriver3PWM driver = BLDCDriver3PWM(U_PWM, V_PWM, W_PWM, U_EN, V_EN, W_EN);
@@ -27,8 +27,8 @@ MagneticSensorMT6701SSI enc = MagneticSensorMT6701SSI(ENC_CS);
 Commander commander = Commander(SerialUSB);
 
 // CAN
-FDCAN_HandleTypeDef hfdcan1;
-enum canSpeed canBusSpeed = MBit1;
+extern FDCAN_HandleTypeDef hfdcan1;
+extern uint8_t* canTxBuf;
 
 // Prototypes
 uint8_t configureFOC(void);
@@ -40,7 +40,7 @@ void setup()
 	pinMode(USER_LED, OUTPUT);
 	pinMode(USER_BUTTON, INPUT);
 
-	SerialUSB.begin();
+	SerialUSB.begin(115200);
 
 	Serial.println(configureFOC() == 1 ? "SFOC successfully init." : "SFOC failed to init.");
 	Serial.println(configureCAN() == 1 ? "CAN successfully init."  : "CAN failed to init.");
@@ -53,6 +53,11 @@ void loop()
 	motor.move();
 	commander.run();
 
+	// How to handle reading/writing serial from the PC?
+	if(SerialUSB.available() > 0){
+		SerialUSB.readBytes((char*)canTxBuf, 8);
+		FDCAN_Write();
+	}
 	#ifdef HAS_MONITOR
 	motor.monitor();
 	#endif
@@ -114,7 +119,11 @@ uint8_t configureFOC(){
 }
 
 uint8_t configureCAN(){
-	return FDCAN_Init(hfdcan1);
+	if(FDCAN_Init(hfdcan1) == CAN_OK){
+		return FDCAN_Config(hfdcan1);
+	}
+
+	return CAN_ERROR;
 }
 
 uint8_t configureDFU(){
