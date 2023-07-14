@@ -506,7 +506,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../../../Desktop/stm32g431-mt6701-stspin233.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
