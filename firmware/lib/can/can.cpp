@@ -8,7 +8,7 @@ FDCAN_RxHeaderTypeDef rxHeader;
 FDCAN_TxHeaderTypeDef txHeader;
 
 uint32_t *fullID = (uint32_t *)0x1FFF7590;
-uint8_t deviceID = (fullID[2] & 0xFF);
+uint8_t __attribute__((weak)) deviceID = (fullID[2] & 0xFF);
 const uint8_t canMaxMsgLen = 8;
 enum canSpeed canBusSpeed = MBit1;
 extern uint8_t canRxBuf[canMaxMsgLen];

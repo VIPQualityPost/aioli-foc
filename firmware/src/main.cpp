@@ -53,10 +53,14 @@ void loop()
 	motor.move();
 	commander.run();
 
-	// How to handle reading/writing serial from the PC?
+	// How to handle reading/writing serial from the PC with motor task?
 	if(SerialUSB.available() > 0){
 		SerialUSB.readBytes((char*)canTxBuf, 8);
 		FDCAN_Write();
+	}
+
+	if(digitalRead(USER_BUTTON) == HIGH){
+		jump_to_bootloader();
 	}
 	#ifdef HAS_MONITOR
 	motor.monitor();
