@@ -36,5 +36,5 @@
 #define I2C1_SCL    PA15
 
 //MISC
-#define USER_LED    PA7
+#define USER_LED   PA7
 #define USER_BUTTON PC4

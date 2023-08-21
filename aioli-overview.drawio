@@ -1,0 +1,310 @@
+<mxfile host="app.diagrams.net" modified="2023-07-03T02:40:02.049Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="iHV1H_qQ0679qMOFoDe6" version="21.3.4" type="device">
+  <diagram name="Page-1" id="QK0k71U0-YMzZS4S_Lbx">
+    <mxGraphModel dx="1468" dy="2058" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="optiHcsyvHdyVhAm3H1W-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=120;exitDy=50;exitPerimeter=0;entryX=0;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-1" target="optiHcsyvHdyVhAm3H1W-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-8" value="FDCAN" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="optiHcsyvHdyVhAm3H1W-5">
+          <mxGeometry x="0.18" y="1" relative="1" as="geometry">
+            <mxPoint x="-9" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-1" value="Module" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="270" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=120;exitDy=50;exitPerimeter=0;entryX=-0.017;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-2" target="optiHcsyvHdyVhAm3H1W-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-9" value="USB" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="optiHcsyvHdyVhAm3H1W-7">
+          <mxGeometry x="0.0004" y="-4" relative="1" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-2" value="Interface" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="270" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-3" value="PC" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="270" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-10" value="&lt;h1 style=&quot;text-align: right;&quot;&gt;AIOLI-FOC overview&amp;nbsp;&lt;/h1&gt;&lt;p style=&quot;text-align: right;&quot;&gt;The modules are all the same and expose two CAN connectors, intended to be linked linearly. The modules can talk to the &quot;interface&quot; module, which from a hardware perspective is the same as the Modules, but is connected to the PC via USB. The module ID is based on the hardware UID which is a 96-bit identifier but is condensed to 11 bits for CAN. We don&#39;t search for the Interface module because we can tell that it is connected via USB so it can provide the UID directly.&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;text-align: right;&quot;&gt;The PC can talk with the interface via USB CDC which enumerates as a Virtual Com Port on the PC.&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;text-align: right;&quot;&gt;There is a user button available on the hardware which is used for learning about new nodes on the network as well as for triggering DFU firmware updates over USB.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="505" y="-40" width="310" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-13" value="DFU Update" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1045" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-14" value="Motor Commands" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;flipV=0;flipH=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1230" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-18" value="Press button" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="690" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-19" value="ID: unique SN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-18">
+          <mxGeometry y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-20" value="message:&amp;nbsp; check if module is registered" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-18">
+          <mxGeometry y="60" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-18" source="optiHcsyvHdyVhAm3H1W-19" target="optiHcsyvHdyVhAm3H1W-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-23" value="Handle message" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="690" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-24" value="Receive message" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-23">
+          <mxGeometry y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-25" value="Format &amp;amp; transmit to PC" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-23">
+          <mxGeometry y="60" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-23" source="optiHcsyvHdyVhAm3H1W-24" target="optiHcsyvHdyVhAm3H1W-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-27" value="Configure module" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="690" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-28" value="Check if SN is new" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-27">
+          <mxGeometry y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-29" value="Assign SN user label/pos&lt;br&gt;&lt;br&gt;Store configurations on disk" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-27">
+          <mxGeometry y="60" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-27" source="optiHcsyvHdyVhAm3H1W-28" target="optiHcsyvHdyVhAm3H1W-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-31" value="Press button" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1010" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-32" value="Enter DFU bootloader&lt;br&gt;&lt;br&gt;Update firmware" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-31">
+          <mxGeometry y="30" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-31" source="optiHcsyvHdyVhAm3H1W-32" target="optiHcsyvHdyVhAm3H1W-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-35" value="Configure module" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="1010" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-36" value="Check for binary&lt;br&gt;&lt;br&gt;Provide update via dfu-tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-35">
+          <mxGeometry y="30" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-35" source="optiHcsyvHdyVhAm3H1W-36" target="optiHcsyvHdyVhAm3H1W-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-19" target="optiHcsyvHdyVhAm3H1W-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-24" target="optiHcsyvHdyVhAm3H1W-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-49" value="Ack" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="845" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-51" value="Module is recognized.&lt;br&gt;&lt;br&gt;Blink LED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-49">
+          <mxGeometry y="30" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="45" as="sourcePoint" />
+            <mxPoint x="150" y="45" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-53" value="Handle Message" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="845" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-54" value="Receive message" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-53">
+          <mxGeometry y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-55" value="Format &amp;amp; transmit to module" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-53">
+          <mxGeometry y="60" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-53" source="optiHcsyvHdyVhAm3H1W-54" target="optiHcsyvHdyVhAm3H1W-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.499;entryY=0.982;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-57" target="optiHcsyvHdyVhAm3H1W-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-57" value="Confirm presence" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="845" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-58" value="Confirm module is registered" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-57">
+          <mxGeometry y="30" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-57" source="optiHcsyvHdyVhAm3H1W-58" target="optiHcsyvHdyVhAm3H1W-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-54">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-69" value="Node Discovery" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="710" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-70" value="On USB connect" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;flipH=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="410" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-72" value="Handle message" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="400" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-73" value="Receive message" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-72">
+          <mxGeometry y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-74" value="Format &amp;amp; transmit to module" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-72">
+          <mxGeometry y="60" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-72" source="optiHcsyvHdyVhAm3H1W-73" target="optiHcsyvHdyVhAm3H1W-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-76" value="Check all modules" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="400" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-78" value="Load saved module SNs&lt;br&gt;&lt;br&gt;Request presence of each module" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-76">
+          <mxGeometry y="30" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-76">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="45" as="sourcePoint" />
+            <mxPoint x="150" y="45" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-80" value="Ack" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="400" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-81" value="Receive message" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-80">
+          <mxGeometry y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-82" value="Blink LED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-80">
+          <mxGeometry y="60" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-80" source="optiHcsyvHdyVhAm3H1W-81" target="optiHcsyvHdyVhAm3H1W-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="444.62" as="sourcePoint" />
+            <mxPoint x="390" y="444.62" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=-0.007;exitY=0.29;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="664" y="445" as="sourcePoint" />
+            <mxPoint x="600" y="444.47" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-86" value="Handle message" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="447.5" y="520" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-87" value="Receive message" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-86">
+          <mxGeometry y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-88" value="Format &amp;amp; transmit to PC" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-86">
+          <mxGeometry y="60" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-86" source="optiHcsyvHdyVhAm3H1W-87" target="optiHcsyvHdyVhAm3H1W-87">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-90" value="Update modules" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="520" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-91" value="Update list of SNs based on responses" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-90">
+          <mxGeometry y="30" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-90">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="45" as="sourcePoint" />
+            <mxPoint x="150" y="45" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.485;entryY=1.017;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-93" target="optiHcsyvHdyVhAm3H1W-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-93" value="Ack" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="237.5" y="520" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-94" value="Respond acknoweldgement" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-93">
+          <mxGeometry y="30" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-93" source="optiHcsyvHdyVhAm3H1W-94" target="optiHcsyvHdyVhAm3H1W-94">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-94" target="optiHcsyvHdyVhAm3H1W-87">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="388" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.007;entryY=0.216;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-87" target="optiHcsyvHdyVhAm3H1W-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.013;entryY=0.083;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="663.05" y="1075.8100000000002" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="1076" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.221;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-54" target="optiHcsyvHdyVhAm3H1W-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="optiHcsyvHdyVhAm3H1W-36" target="optiHcsyvHdyVhAm3H1W-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-122" value="Handle message" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1200" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-123" value="Receive message" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-122">
+          <mxGeometry y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-124" value="Format &amp;amp; transmit to module (or self)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-122">
+          <mxGeometry y="60" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-122" source="optiHcsyvHdyVhAm3H1W-123" target="optiHcsyvHdyVhAm3H1W-123">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-126" value="UI button" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="1200" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-127" value="Determine motor and desired action&lt;br&gt;&lt;br&gt;Transmit command" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-126">
+          <mxGeometry y="30" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-126">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="45" as="sourcePoint" />
+            <mxPoint x="150" y="45" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-129" value="Ack" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1200" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-130" value="Receive message" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-129">
+          <mxGeometry y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-131" value="Move motor" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="optiHcsyvHdyVhAm3H1W-129">
+          <mxGeometry y="60" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="optiHcsyvHdyVhAm3H1W-129" source="optiHcsyvHdyVhAm3H1W-130" target="optiHcsyvHdyVhAm3H1W-130">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="1244.62" as="sourcePoint" />
+            <mxPoint x="390" y="1244.62" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=-0.007;exitY=0.29;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="664" y="1245" as="sourcePoint" />
+            <mxPoint x="600" y="1244.47" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="optiHcsyvHdyVhAm3H1W-135" value="Should we check if the motor actually received the command?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="388" y="1320" width="182" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

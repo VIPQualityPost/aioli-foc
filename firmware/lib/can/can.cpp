@@ -1,188 +1,185 @@
-#include "stm32g4xx_hal_conf.h"
-#include "stm32g4xx_hal_fdcan.h"
 #include "can.h"
+#include "stm32g4xx_hal.h"
+#include "stm32g4xx_hal_fdcan.h"
+#include <Arduino.h>
 
 FDCAN_HandleTypeDef hfdcan1;
-FDCAN_FilterTypeDef canFilterConfig;
-FDCAN_RxHeaderTypeDef rxHeader;
-FDCAN_TxHeaderTypeDef txHeader;
+FDCAN_RxHeaderTypeDef RxHeader;
+FDCAN_TxHeaderTypeDef TxHeader;
 
-uint32_t *fullID = (uint32_t *)0x1FFF7590;
-uint8_t __attribute__((weak)) deviceID = (fullID[2] & 0xFF);
-const uint8_t canMaxMsgLen = 8;
-enum canSpeed canBusSpeed = MBit1;
-extern uint8_t canRxBuf[canMaxMsgLen];
-extern uint8_t canTxBuf[canMaxMsgLen];
+uint8_t TxData[8];
+uint8_t RxData[8];
 
-__weak void userCanRxHandler(FDCAN_RxHeaderTypeDef canRxHeader){
-	// Actually implement this in the user main.c file.
-}
-
-uint8_t FDCAN_Init(FDCAN_HandleTypeDef hfdcan)
+void FDCAN_Error_Handler(void)
 {
-	hfdcan.Instance = FDCAN1;
-	hfdcan.Init.ClockDivider = FDCAN_CLOCK_DIV1;
-	hfdcan.Init.FrameFormat = FDCAN_FRAME_CLASSIC;
-	hfdcan.Init.Mode = FDCAN_MODE_NORMAL;
-	hfdcan.Init.AutoRetransmission = DISABLE;
-	hfdcan.Init.TransmitPause = DISABLE;
-	hfdcan.Init.ProtocolException = DISABLE;
-	// Need to check if this actually produces the right speeds- need to check clock tree
-	hfdcan.Init.NominalPrescaler = canBusSpeed;
-	hfdcan.Init.NominalSyncJumpWidth = 1;
-	hfdcan.Init.NominalTimeSeg1 = 2;
-	hfdcan.Init.NominalTimeSeg2 = 2;
-	hfdcan.Init.DataPrescaler = 1;
-	hfdcan.Init.DataSyncJumpWidth = 1;
-	hfdcan.Init.DataTimeSeg1 = 1;
-	hfdcan.Init.DataTimeSeg2 = 1;
-	hfdcan.Init.StdFiltersNbr = 0;
-	hfdcan.Init.ExtFiltersNbr = 0;
-	hfdcan.Init.TxFifoQueueMode = FDCAN_TX_FIFO_OPERATION;
-	if (HAL_FDCAN_Init(&hfdcan) != HAL_OK)
-	{
-		return CAN_ERROR;
-	}
-
-	return CAN_OK;
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
 }
 
-uint8_t FDCAN_Config(FDCAN_HandleTypeDef hfdcan)
+void FDCAN_Init(void)
 {
-	FDCAN_FilterTypeDef canFilter;
-	/* Configure Rx filter */
-	canFilter.IdType = FDCAN_STANDARD_ID;
-	canFilter.FilterIndex = 0;
-	canFilter.FilterType = FDCAN_FILTER_MASK;
-	canFilter.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
-	canFilter.FilterID1 = deviceID;
-	if (HAL_FDCAN_ConfigFilter(&hfdcan, &canFilter) != HAL_OK)
-	{
-		return CAN_ERROR;
-	}
+  hfdcan1.Instance = FDCAN1;
+  hfdcan1.Init.ClockDivider = FDCAN_CLOCK_DIV1;
+  hfdcan1.Init.FrameFormat = FDCAN_FRAME_FD_NO_BRS;
+  hfdcan1.Init.Mode = FDCAN_MODE_NORMAL;
+  hfdcan1.Init.AutoRetransmission = ENABLE;
+  hfdcan1.Init.TransmitPause = DISABLE;
+  hfdcan1.Init.ProtocolException = DISABLE;
 
-	/* Configure global filter:
-	   Filter all remote frames with STD and EXT ID
-	   Reject non matching frames with STD ID and EXT ID */
-	if (HAL_FDCAN_ConfigGlobalFilter(&hfdcan, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE) != HAL_OK)
-	{
-		return CAN_ERROR;
-	}
+#ifdef TJA1050
+// TJA1050 timing specifications
+#endif
 
-	/* Start the FDCAN module */
-	if (HAL_FDCAN_Start(&hfdcan) != HAL_OK)
-	{
-		return CAN_ERROR;
-	}
+  // #ifdef SN65HVD23x
+  hfdcan1.Init.NominalPrescaler = 1;
+  hfdcan1.Init.NominalSyncJumpWidth = 2;
+  hfdcan1.Init.NominalTimeSeg1 = 21;
+  hfdcan1.Init.NominalTimeSeg2 = 2;
 
-	if (HAL_FDCAN_ActivateNotification(&hfdcan, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
-	{
-		return CAN_ERROR;
-	}
+  hfdcan1.Init.DataPrescaler = 1;
+  hfdcan1.Init.DataSyncJumpWidth = 5;
+  hfdcan1.Init.DataTimeSeg1 = 6;
+  hfdcan1.Init.DataTimeSeg2 = 5;
+  // #endif
 
-	/* Prepare Tx Header */
-	txHeader.Identifier = deviceID;
-	txHeader.IdType = FDCAN_STANDARD_ID;
-	txHeader.TxFrameType = FDCAN_DATA_FRAME;
-	txHeader.DataLength = FDCAN_DLC_BYTES_2;
-	txHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
-	txHeader.BitRateSwitch = FDCAN_BRS_OFF;
-	txHeader.FDFormat = FDCAN_CLASSIC_CAN;
-	txHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
-	txHeader.MessageMarker = 0;
+  hfdcan1.Init.StdFiltersNbr = 1;
+  hfdcan1.Init.ExtFiltersNbr = 0;
+  hfdcan1.Init.TxFifoQueueMode = FDCAN_TX_FIFO_OPERATION;
 
-	return CAN_OK;
-}
-
-uint8_t FDCAN_Write(void){
-	if(HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &txHeader, canTxBuf) != HAL_OK){
-		return CAN_ERROR;
-	}
-
-	return CAN_OK;
-}
-
-void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
-{
-  if((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET)
+  if (HAL_FDCAN_Init(&hfdcan1) != HAL_OK)
   {
-    /* Retrieve Rx messages from RX FIFO0 */
-    HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &rxHeader, canRxBuf);
-
-	userCanRxHandler(rxHeader);
+    FDCAN_Error_Handler();
   }
 }
 
-void HAL_FDCAN_MspInit(FDCAN_HandleTypeDef *hfdcan)
+void FDCAN_ConfigTx(void)
 {
-	GPIO_InitTypeDef GPIO_InitStruct = {0};
-	RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
-	if (hfdcan->Instance == FDCAN1)
-	{
-		/* USER CODE BEGIN FDCAN1_MspInit 0 */
+  FDCAN_FilterTypeDef sFilterConfig;
 
-		/* USER CODE END FDCAN1_MspInit 0 */
+  sFilterConfig.IdType = FDCAN_STANDARD_ID;
+  sFilterConfig.FilterIndex = 0;
+  sFilterConfig.FilterType = FDCAN_FILTER_MASK;
+  sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
+  sFilterConfig.FilterID1 = 0x11;
+  sFilterConfig.FilterID2 = 0x11;
+  if (HAL_FDCAN_ConfigFilter(&hfdcan1, &sFilterConfig) != HAL_OK)
+  {
+    /* Filter configuration Error */
+    FDCAN_Error_Handler();
+  }
 
-		/** Initializes the peripherals clocks
-		 */
-		PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_FDCAN;
-		PeriphClkInit.FdcanClockSelection = RCC_FDCANCLKSOURCE_PCLK1;
-		if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-		{
-			return;
-		}
-
-		/* Peripheral clock enable */
-		__HAL_RCC_FDCAN_CLK_ENABLE();
-
-		__HAL_RCC_GPIOB_CLK_ENABLE();
-		/**FDCAN1 GPIO Configuration
-		PB8-BOOT0     ------> FDCAN1_RX
-		PB9     ------> FDCAN1_TX
-		*/
-		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_NOPULL;
-		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-		GPIO_InitStruct.Alternate = GPIO_AF9_FDCAN1;
-#ifdef FDCAN1_DEF
-		GPIO_InitStruct.Pin = GPIO_PIN_11 | GPIO_PIN_12;
-		HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-#endif
-#ifdef FDCAN1_ALT
-		GPIO_InitStruct.Pin = GPIO_PIN_8 | GPIO_PIN_9;
-		HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-#endif
-
-		/* USER CODE BEGIN FDCAN1_MspInit 1 */
-
-		/* USER CODE END FDCAN1_MspInit 1 */
-	}
+  TxHeader.Identifier = 0x11;
+  TxHeader.IdType = FDCAN_STANDARD_ID;
+  TxHeader.TxFrameType = FDCAN_DATA_FRAME;
+  TxHeader.DataLength = FDCAN_DLC_BYTES_8;
+  TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
+  TxHeader.BitRateSwitch = FDCAN_BRS_OFF;
+  TxHeader.FDFormat = FDCAN_FD_CAN;
+  TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
+  TxHeader.MessageMarker = 0;
 }
 
-void HAL_FDCAN_MspDeInit(FDCAN_HandleTypeDef *hfdcan)
+void HAL_FDCAN_MspInit(FDCAN_HandleTypeDef *fdcanHandle)
 {
-	if (hfdcan->Instance == FDCAN1)
-	{
-		/* USER CODE BEGIN FDCAN1_MspDeInit 0 */
 
-		/* USER CODE END FDCAN1_MspDeInit 0 */
-		/* Peripheral clock disable */
-		__HAL_RCC_FDCAN_CLK_DISABLE();
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+  if (fdcanHandle->Instance == FDCAN1)
+  {
+    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_FDCAN;
+    PeriphClkInit.FdcanClockSelection = RCC_FDCANCLKSOURCE_HSE;
+    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+    {
+      Error_Handler();
+    }
 
-/**FDCAN1 GPIO Configuration
-PB8-BOOT0     ------> FDCAN1_RX
-PB9     ------> FDCAN1_TX
-*/
-#ifdef FDCAN1_DEF
-		HAL_GPIO_DeInit(GPIOA, GPIO_PIN_11 | GPIO_PIN_12);
-#endif
+    __HAL_RCC_FDCAN_CLK_ENABLE();
 
-#ifdef FDCAN1_ALT
-		HAL_GPIO_DeInit(GPIOB, GPIO_PIN_8 | GPIO_PIN_9);
-#endif
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    /**FDCAN1 GPIO Configuration
+    PB8-BOOT0     ------> FDCAN1_RX
+    PB9     ------> FDCAN1_TX
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_8 | GPIO_PIN_9;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Alternate = GPIO_AF9_FDCAN1;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-		/* USER CODE BEGIN FDCAN1_MspDeInit 1 */
+    HAL_NVIC_SetPriority(FDCAN1_IT0_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(FDCAN1_IT0_IRQn);
+  }
+}
 
-		/* USER CODE END FDCAN1_MspDeInit 1 */
-	}
+void HAL_FDCAN_MspDeInit(FDCAN_HandleTypeDef *fdcanHandle)
+{
+
+  if (fdcanHandle->Instance == FDCAN1)
+  {
+    __HAL_RCC_FDCAN_CLK_DISABLE();
+
+    /**FDCAN1 GPIO Configuration
+    PB8-BOOT0     ------> FDCAN1_RX
+    PB9     ------> FDCAN1_TX
+    */
+    HAL_GPIO_DeInit(GPIOB, GPIO_PIN_8 | GPIO_PIN_9);
+
+    HAL_NVIC_DisableIRQ(FDCAN1_IT0_IRQn);
+  }
+}
+
+void FDCAN1_IT0_IRQHandler(void)
+{
+  HAL_FDCAN_IRQHandler(&hfdcan1);
+}
+
+void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *fdcanHandle, uint32_t RxFifo0ITs)
+{
+  if ((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET)
+  {
+    if (HAL_FDCAN_GetRxMessage(fdcanHandle, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
+    {
+      FDCAN_Error_Handler();
+    }
+    else
+    {
+      uint8_t i;
+      for (i = 0; i < 6; i++)
+      {
+        digitalToggle(PA7);
+        delay(50);
+      }
+    }
+
+    if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
+    {
+      FDCAN_Error_Handler();
+    }
+  }
+}
+
+void FDCAN_Start(void)
+{
+  FDCAN_Init();
+  FDCAN_ConfigTx();
+
+  if (HAL_FDCAN_Start(&hfdcan1) != HAL_OK)
+  {
+    FDCAN_Error_Handler();
+  }
+
+  if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
+  {
+    FDCAN_Error_Handler();
+  }
+}
+
+void FDCAN_SendMessage(uint8_t dataByte)
+{
+  TxData[0] = dataByte;
+
+  if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK)
+  {
+    FDCAN_Error_Handler();
+  }
 }
