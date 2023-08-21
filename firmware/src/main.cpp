@@ -2,8 +2,6 @@
 #include <EEPROM.h>
 #include <Spi.h>
 
-// #include <FlashStorage_STM32.h>
-
 #include <SimpleFOC.h>
 #include <SimpleFOCDrivers.h>
 #include "encoders/MT6701/MagneticSensorMT6701SSI.h"
@@ -16,7 +14,7 @@
 #include "aioli-board.h"
 
 #define USBD_MANUFACTURER_STRING     	"matei repair lab"
-#define USBD_PRODUCT_STRING_FS     		"knitting machine"
+#define USBD_PRODUCT_STRING_FS     		"aioli-foc"
 
 // Motor specific parameters.
 #define POLEPAIRS 7
@@ -24,12 +22,9 @@
 #define MOTORKV 1000
 
 uint8_t useDFU = 0;
-
-extern FDCAN_HandleTypeDef hfdcan1;
-extern FDCAN_RxHeaderTypeDef RxHeader;
-extern uint8_t RxData[8];
-
 uint8_t canCounter = 0;
+
+extern uint8_t RxData[8];
 
 // simpleFOC constructors
 BLDCDriver3PWM driver = BLDCDriver3PWM(U_PWM, V_PWM, W_PWM, U_EN, V_EN, W_EN);
@@ -41,25 +36,30 @@ Commander commander = Commander(SerialUSB);
 void configureFOC(void);
 void configureCAN(void);
 void configureDFU(void);
+void userButtonIT(void);
 
 void setup()
 {
 	// SCB->VTOR == 0x08000000;
 	pinMode(USER_LED, OUTPUT);
-	pinMode(USER_BUTTON, INPUT);
+	attachInterrupt(USER_BUTTON, userButtonIT, HIGH);
 
 	SerialUSB.begin(115200);
 
 	configureCAN();
-	// configureDFU();
-	// configureFOC();
+	configureDFU();
+	configureFOC();
 }
 
 void loop()
 {
-	// motor.loopFOC();
-	// motor.move();
-	// commander.run();
+	motor.loopFOC();
+	motor.move();
+	commander.run();
+		
+	#ifdef HAS_MONITOR
+	motor.monitor();
+	#endif
 
 	// How to handle reading/writing SerialUSB from the PC with motor task?
 	// if(SerialUSBUSB.available() > 0){
@@ -67,39 +67,11 @@ void loop()
 	// 	FDCAN_Write();
 	// }
 
-	// if(digitalRead(USER_BUTTON) == HIGH){
-	// 	// jump_to_bootloader();
-	// 	FDCAN_SendMessage(0xFF);
-	// 	// while(digitalRead(USER_BUTTON) == HIGH){}
-	// }
-
-	if(digitalRead(USER_BUTTON) == HIGH){
-		canCounter += 1;
-		FDCAN_SendMessage(canCounter);
+	if(RxData[0] != 0)
+	{
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
+		RxData[0] = 0;
 	}
-
-	digitalToggle(USER_LED);
-	delay(1000);
-
-	// if(HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, FDCAN_RX_FIFO0) > 0)
-	// {
-	// 	uint8_t i;
-	// 	for(i=0; i<6; i++){
-	// 		digitalToggle(USER_LED);
-	// 		delay(10);
-	// 	}
-	// 	HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, &RxHeader, RxData);
-	// }
-	// else
-	// {
-		// digitalToggle(USER_LED);
-		// delay(1000);
-	// }
-
-
-	#ifdef HAS_MONITOR
-	motor.monitor();
-	#endif
 }
 
 void doMotor(char *cmd)
@@ -182,7 +154,6 @@ void configureFOC(void){
 		motor.sensor_direction = boardData.electricalDir;
 		motor.init();
 		motor.initFOC();
-		// motor.initFOC(boardData.electricalZero, (Direction)boardData.electricalDir);
 	}
 }
 
@@ -193,4 +164,10 @@ void configureCAN(void){
 void configureDFU(void){
 	// jump_to_bootloader();
 	// return 1;
+}
+
+void userButtonIT(void)
+{
+	canCounter += 1;
+	FDCAN_SendMessage(canCounter);
 }
