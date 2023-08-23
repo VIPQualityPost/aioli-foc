@@ -3,6 +3,8 @@
 *gerbers/
 *assembly/
 *datasheets/
+hardware/#*
+hardware/*.lck
 .DS_Store
 .pio/
 .vscode/
