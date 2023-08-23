@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <EEPROM.h>
-#include <Spi.h>
+#include <SPI.h>
 
 #include <SimpleFOC.h>
 #include <SimpleFOCDrivers.h>
@@ -16,17 +16,35 @@
 #define USBD_MANUFACTURER_STRING     	"matei repair lab"
 #define USBD_PRODUCT_STRING_FS     		"aioli-foc"
 
-// Motor specific parameters.
+uint8_t hasUSBConnection = 0;
+
+// board specific data
+typedef struct
+{
+	uint16_t signature;
+	int8_t electricalDir;
+	float electricalZero;
+	uint8_t canID;
+}userData;
+
+userData boardData;
+const uint16_t magicWord = 0xAF0C;
+
+// canbus things
+typedef struct
+{
+	uint8_t name;
+}TxPacket;
+
+TxPacket canTxPacket;
+extern uint8_t TxData[8];
+extern uint8_t RxData[8];
+
+// simpleFOC things
 #define POLEPAIRS 7
 #define RPHASE 1.4
 #define MOTORKV 1000
 
-uint8_t useDFU = 0;
-uint8_t canCounter = 0;
-
-extern uint8_t RxData[8];
-
-// simpleFOC constructors
 BLDCDriver3PWM driver = BLDCDriver3PWM(U_PWM, V_PWM, W_PWM, U_EN, V_EN, W_EN);
 BLDCMotor motor = BLDCMotor(POLEPAIRS, RPHASE, MOTORKV);
 MagneticSensorMT6701SSI enc = MagneticSensorMT6701SSI(ENC_CS);
@@ -36,41 +54,42 @@ Commander commander = Commander(SerialUSB);
 void configureFOC(void);
 void configureCAN(void);
 void configureDFU(void);
-void userButtonIT(void);
+void userButton_IT(void);
 
 void setup()
 {
 	// SCB->VTOR == 0x08000000;
 	pinMode(USER_LED, OUTPUT);
-	attachInterrupt(USER_BUTTON, userButtonIT, HIGH);
+	attachInterrupt(USER_BUTTON, userButton_IT, HIGH);
 
 	SerialUSB.begin(115200);
 
+	EEPROM.get(0, boardData);
+
 	configureCAN();
 	configureDFU();
-	configureFOC();
+	// configureFOC();
+
+	// if(boardData.signature != magicWord)
+	// {
+	// 	EEPROM.put(0, boardData);
+	// }
 }
 
 void loop()
 {
-	motor.loopFOC();
-	motor.move();
-	commander.run();
+	// motor.loopFOC();
+	// motor.move();
+	// commander.run();
 		
 	#ifdef HAS_MONITOR
 	motor.monitor();
 	#endif
 
-	// How to handle reading/writing SerialUSB from the PC with motor task?
-	// if(SerialUSBUSB.available() > 0){
-	// 	SerialUSBUSB.readBytes((char*)canTxBuf, 8);
-	// 	FDCAN_Write();
-	// }
-
-	if(RxData[0] != 0)
+	if((USB->DADDR & 0x7F) != 0)
 	{
-		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
-		RxData[0] = 0;
+		digitalWrite(USER_LED, HIGH);
+		hasUSBConnection = 1;
 	}
 }
 
@@ -125,19 +144,6 @@ void configureFOC(void){
 
 	motor.target = 0;
 
-	motor.initFOC();
-	typedef struct
-	{
-		uint16_t signature;
-		int8_t electricalDir;
-		float electricalZero;
-	}userData;
-
-	userData boardData;
-	EEPROM.get(0, boardData);
-
-	uint16_t magicWord = 0xAF0C;
-
 	if(boardData.signature != magicWord){
 		// If we have not initialized the EEPROM before.
 		motor.init();
@@ -146,8 +152,6 @@ void configureFOC(void){
 		boardData.signature = magicWord;
 		boardData.electricalZero = motor.zero_electric_angle;
 		boardData.electricalDir = motor.sensor_direction;
-
-		EEPROM.put(0, boardData);	// Signature if we have written to EEPROM before.
 	}
 	else{
 		motor.zero_electric_angle = boardData.electricalZero;
@@ -158,7 +162,7 @@ void configureFOC(void){
 }
 
 void configureCAN(void){
-	FDCAN_Start();
+	FDCAN_Start(boardData.canID);
 }
 
 void configureDFU(void){
@@ -166,8 +170,18 @@ void configureDFU(void){
 	// return 1;
 }
 
-void userButtonIT(void)
+// void checkConnectionUSB(void)
+// {
+
+// }
+
+void userButton_IT(void)
 {
-	canCounter += 1;
-	FDCAN_SendMessage(canCounter);
+	FDCAN_SendMessage();
 }
+
+void canTxStructToData(void)
+{
+	TxData[0] = canTxPacket.name;
+}
+
