@@ -1,11 +1,22 @@
 #include "can.h"
 
-#define GLOBAL_ID 0x7CC
+enum canAction
+{
+  WaitForCmd,
+  TxDeviceInfo,
+  SearchForID
+};
 
 FDCAN_HandleTypeDef hfdcan1;
+FDCAN_FilterTypeDef sFilterConfig;
 FDCAN_RxHeaderTypeDef RxHeader;
 FDCAN_TxHeaderTypeDef TxHeader;
 
+canAction FDCAN_State = WaitForCmd;
+const uint16_t FDCAN_GlobalID = 0x7CC;
+uint16_t FDCAN_TempID;
+uint8_t foundExtDevice = 0;
+uint8_t JunkBuf[8];
 uint8_t TxData[8];
 uint8_t RxData[8];
 
@@ -38,7 +49,7 @@ void FDCAN_Init(void)
   hfdcan1.Init.DataTimeSeg2 = 5;
   //
 
-  hfdcan1.Init.StdFiltersNbr = 1;
+  hfdcan1.Init.StdFiltersNbr = 2;
   hfdcan1.Init.ExtFiltersNbr = 0;
   hfdcan1.Init.TxFifoQueueMode = FDCAN_TX_FIFO_OPERATION;
 
@@ -48,23 +59,24 @@ void FDCAN_Init(void)
   }
 }
 
-void FDCAN_ConfigIO(uint8_t CAN_ID)
+void FDCAN_ConfigFilter(uint16_t canID)
 {
-  FDCAN_FilterTypeDef sFilterConfig;
-
   sFilterConfig.IdType = FDCAN_STANDARD_ID;
   sFilterConfig.FilterIndex = 0;
   sFilterConfig.FilterType = FDCAN_FILTER_DUAL;
   sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
-  sFilterConfig.FilterID1 = CAN_ID;
-  sFilterConfig.FilterID2 = GLOBAL_ID;
+  sFilterConfig.FilterID1 = canID;
+  sFilterConfig.FilterID2 = FDCAN_GlobalID;
   if (HAL_FDCAN_ConfigFilter(&hfdcan1, &sFilterConfig) != HAL_OK)
   {
     /* Filter configuration Error */
     FDCAN_Error_Handler();
   }
+}
 
-  TxHeader.Identifier = CAN_ID;
+void FDCAN_ConfigTxHeader(uint16_t canID)
+{
+  TxHeader.Identifier = canID;
   TxHeader.IdType = FDCAN_STANDARD_ID;
   TxHeader.TxFrameType = FDCAN_DATA_FRAME;
   TxHeader.DataLength = FDCAN_DLC_BYTES_8;
@@ -132,19 +144,114 @@ extern "C" void FDCAN1_IT0_IRQHandler(void)
 
 void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 {
-  if ((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET)
+  if (RxHeader.RxFrameType == FDCAN_REMOTE_FRAME)
   {
-    if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
+    HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &RxHeader, JunkBuf);
+
+    // clear the buffer
+    memset(TxData, 0x00, TxHeader.DataLength * sizeof(uint8_t));
+    memcpy(&TxData, &(TxHeader.Identifier), sizeof(uint16_t));
+
+    // we need all devices to receive it, because we don't know the ID of the requestor.
+    TxHeader.Identifier = FDCAN_GlobalID;
+    FDCAN_SendMessage();
+  }
+  else
+  {
+    HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &RxHeader, RxData);
+
+    switch (FDCAN_State)
     {
-      FDCAN_Error_Handler();
+    case WaitForCmd:
+      // Set some flag to indicate that sfoc has a new command.
+      if (RxHeader.Identifier = FDCAN_GlobalID)
+      {
+
+      }
+      else
+      {
+
+      }
+      break;
+
+    case SearchForID:
+      if (RxHeader.Identifier == FDCAN_GlobalID)
+      {
+        // Copy the 11 byte device ID from the rx buffer.
+        foundExtDevice = 1;
+        memcpy(&FDCAN_TempID, &RxData, sizeof(uint16_t));
+      }
+      else
+      {
+
+      }
+      break;
+
+    default:
+      break;
     }
   }
 }
 
-void FDCAN_Start(uint8_t CAN_ID)
+void FDCAN_SendMessage(void)
+{
+  switch (FDCAN_State)
+  {
+  case TxDeviceInfo:
+    break;
+
+  case SearchForID:
+    TxHeader.Identifier = FDCAN_TempID;
+    TxHeader.TxFrameType = FDCAN_REMOTE_FRAME;
+    TxHeader.DataLength = FDCAN_DLC_BYTES_0;
+    break;
+
+  default:
+    break;
+  }
+
+  if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK)
+  {
+    FDCAN_Error_Handler();
+  }
+
+  // Set the tx parameters back to normal. 
+  TxHeader.TxFrameType = FDCAN_DATA_FRAME;
+  TxHeader.DataLength = FDCAN_DLC_BYTES_8;
+}
+
+uint16_t FDCAN_FindUniqueID(void)
+{
+  FDCAN_TempID = 0x000;
+  FDCAN_State = SearchForID;
+
+  while (1)
+  {
+    foundExtDevice = 0;
+    FDCAN_SendMessage();
+    delay(100);
+    if (foundExtDevice)
+    {
+      // Try the next address.
+      FDCAN_TempID++;
+    }
+    else
+    {
+      // We found a unique device ID!
+      FDCAN_State = WaitForCmd;
+      FDCAN_ConfigFilter(FDCAN_TempID);
+      FDCAN_ConfigTxHeader(FDCAN_TempID);
+      digitalWrite(PA7, HIGH);
+      return FDCAN_TempID;
+    }
+  }
+}
+
+void FDCAN_Start(uint16_t canID)
 {
   FDCAN_Init();
-  FDCAN_ConfigIO(CAN_ID);
+  FDCAN_ConfigFilter(canID);
+  FDCAN_ConfigTxHeader(canID);
 
   // __HAL_FDCAN_ENABLE_IT(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE);
 
@@ -157,30 +264,4 @@ void FDCAN_Start(uint8_t CAN_ID)
   {
     FDCAN_Error_Handler();
   }
-}
-
-void FDCAN_SendMessage(void)
-{
-  if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK)
-  {
-    FDCAN_Error_Handler();
-  }
-}
-
-void requestUniqueID(void)
-{
-  TxData[0] = 0xFF;
-
-  FDCAN_SendMessage();
-}
-
-void reassignID(uint8_t newID)
-{
-  if(newID > 0x7FF){
-    // ID has to be smaller than this for standard ID (11 bits)
-    return;
-  }
-  HAL_FDCAN_Stop(&hfdcan1);
-  FDCAN_ConfigIO(newID);
-  HAL_FDCAN_Start(&hfdcan1);
 }

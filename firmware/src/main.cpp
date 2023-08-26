@@ -16,8 +16,6 @@
 #define USBD_MANUFACTURER_STRING     	"matei repair lab"
 #define USBD_PRODUCT_STRING_FS     		"aioli-foc"
 
-uint8_t hasUSBConnection = 0;
-
 // board specific data
 typedef struct
 {
@@ -53,7 +51,6 @@ Commander commander = Commander(SerialUSB);
 // Prototypes
 void configureFOC(void);
 void configureCAN(void);
-void configureDFU(void);
 void userButton_IT(void);
 
 void setup()
@@ -67,11 +64,18 @@ void setup()
 	EEPROM.get(0, boardData);
 
 	configureCAN();
-	configureDFU();
-	// configureFOC();
+	configureFOC();
+
+	if(boardData.canID == 0x000)
+	{
+		// If the can ID is not initialized, then we'll look for a free ID.
+		boardData.canID = FDCAN_FindUniqueID();
+		SerialUSB.println(boardData.canID);
+	}
 
 	// if(boardData.signature != magicWord)
 	// {
+	// 	// If the EEPROM has not been initalized yet, save all the known data.
 	// 	EEPROM.put(0, boardData);
 	// }
 }
@@ -85,12 +89,6 @@ void loop()
 	#ifdef HAS_MONITOR
 	motor.monitor();
 	#endif
-
-	if((USB->DADDR & 0x7F) != 0)
-	{
-		digitalWrite(USER_LED, HIGH);
-		hasUSBConnection = 1;
-	}
 }
 
 void doMotor(char *cmd)
@@ -165,23 +163,16 @@ void configureCAN(void){
 	FDCAN_Start(boardData.canID);
 }
 
-void configureDFU(void){
-	// jump_to_bootloader();
-	// return 1;
-}
-
-// void checkConnectionUSB(void)
-// {
-
-// }
-
 void userButton_IT(void)
 {
-	FDCAN_SendMessage();
-}
-
-void canTxStructToData(void)
-{
-	TxData[0] = canTxPacket.name;
+		if((USB->DADDR & 0x7F) != 0)
+		{
+			// If the device is the first in the chain (e.g. with USB serial connection to PC)
+			// we can go to bootloader using the user button.
+			jump_to_bootloader();
+		}
+		else{
+			FDCAN_FindUniqueID();
+		}
 }
 
