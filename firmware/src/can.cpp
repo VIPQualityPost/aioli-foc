@@ -14,7 +14,6 @@
  * trigger the firmware update.
 */
 
-#include "SimpleCan.h"
 #include "aioli-board.h"
 
 #define SFOC_CMD 0x01
@@ -23,9 +22,6 @@ extern uint8_t sfocCmdStr;
 
 static void handleCanMessage(FDCAN_RxHeaderTypeDef rxHeader, uint8_t *rxData);
 static void configureCAN();
-
-SimpleCan can1(-1,-1);
-SimpleCan::RxHandler can1RxHandler(8, handleCanMessage);
 
 FDCAN_TxHeaderTypeDef TxHeader;
 uint8_t TxData[8];

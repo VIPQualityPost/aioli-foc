@@ -1,8 +1,8 @@
 #include <Arduino.h>
-#include <Spi.h>
+#include <SPI.h>
 #include <SimpleFOC.h>
 #include <SimpleFOCDrivers.h>
-#include "encoders/MT6701/MagneticSensorMT6701SSI.h"
+#include "encoders/mt6701/MagneticSensorMT6701SSI.h"
 
 #include "./drv_reset.h"
 #include "./aioli-board.h"

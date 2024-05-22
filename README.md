@@ -6,3 +6,9 @@ The target for this project was to create an all-in-one simpleFOC board with hig
 
 ![Photo of PCB](/single.jpg)
 ![Photo of PCBs](/many.jpg)
+
+# Building
+
+- Install [platformio core](https://docs.platformio.org/en/latest/core/installation/methods/index.html)
+- `git submodule init`
+- `git submodule update`
