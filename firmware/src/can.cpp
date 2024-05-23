@@ -7,10 +7,10 @@
  * The idea is that this node will ask if any other node
  * on the bus has a specific ID (CAN_ID). If it exists then
  * that node responds, we increment the ID and try again.
- * 
- * This would get run if you press the "DFU" button on a 
- * module that is not connected to the USB port. That node 
- * is always 0xFF and DFU button on that one will actually 
+ *
+ * This would get run if you press the "DFU" button on a
+ * module that is not connected to the USB port. That node
+ * is always 0xFF and DFU button on that one will actually
  * trigger the firmware update.
 */
 
@@ -88,5 +88,5 @@ void writeFrame(uint8_t writeData[])
     #ifdef CAN_DEBUG
 	Serial.print("CAN: sending message ");
 	Serial.println(can1.addMessageToTxFifoQ(&TxHeader, writeData) == HAL_OK ? "was ok." : "failed.");
-    #endif 
+    #endif
 }

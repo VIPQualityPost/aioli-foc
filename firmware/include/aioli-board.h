@@ -18,14 +18,14 @@
 #define CAN_RX      PB8
 
 // GC9AO1 TFT DISPLAY (SPI3)
-#define TFT_COPI    PB5    
+#define TFT_COPI    PB5
 #define TFT_SCK     PC10
 #define TFT_CS      PB3
 #define TFT_DC      PC14
 #define TFT_BL      PC13 // PWM TIM8CH4N
 
 // GENERAL SPI (SPI3)
-#define SPI3_CS     PB11 
+#define SPI3_CS     PB11
 
 // GENERAL UART
 #define UART2_TX    PA2

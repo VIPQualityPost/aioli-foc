@@ -66,7 +66,7 @@ void loop()
 uint8_t configureFOC(){
 	commander.add('M', doMotor, "motor");
 	commander.verbose = VerboseMode::machine_readable;
-	
+
 	#ifdef SIMPLEFOC_STM_DEBUG
 	SimpleFOCDebug::enable(&Serial);
 	#endif
@@ -118,6 +118,6 @@ uint8_t configureCAN(){
 }
 
 uint8_t configureDFU(){
-	
+
 	return 1;
 }
