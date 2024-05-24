@@ -1,3 +1,0 @@
-[submodule "firmware/lib/SimpleCanLib"]
-	path = firmware/lib/SimpleCanLib
-	url = https://Igitigit2/SimpleCanLib.git

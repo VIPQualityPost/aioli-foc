@@ -2333,7 +2333,7 @@ CST-931RP-A
 Buzzer_Beeper
 MagneticBuzzer_Kingstate_KCG0601
 Buzzer, Elektromagnetic Beeper, Summer,
-Kingstate KCG0601 
+Kingstate KCG0601
 0
 2
 2
@@ -2361,28 +2361,28 @@ Buzzer Magnetic 9mm AT-0927-TT-6-R
 Buzzer_Beeper
 MagneticBuzzer_ProSignal_ABI-009-RC
 Buzzer, Elektromagnetic Beeper, Summer, 6V-DC,
-Pro Signal ABI-009-RC 
+Pro Signal ABI-009-RC
 0
 2
 2
 Buzzer_Beeper
 MagneticBuzzer_ProSignal_ABI-010-RC
 Buzzer, Elektromagnetic Beeper, Summer, 12V-DC,
-Pro Signal ABI-010-RC 
+Pro Signal ABI-010-RC
 0
 2
 2
 Buzzer_Beeper
 MagneticBuzzer_ProSignal_ABT-410-RC
 Buzzer, Elektromagnetic Beeper, Summer, 1,5V-DC,
-Pro Signal ABT-410-RC 
+Pro Signal ABT-410-RC
 0
 2
 2
 Buzzer_Beeper
 MagneticBuzzer_ProjectsUnlimited_AI-4228-TWT-R
 Buzzer, Elektromagnetic Beeper, Summer, 3-28V-DC, https://www.kynix.com/uploadfiles/pdf/AI-4228-TWT-R.pdf
-Projects Unlimited AI-4228-TWT-R 
+Projects Unlimited AI-4228-TWT-R
 0
 2
 2
@@ -2542,7 +2542,7 @@ Gauge Massstab 100mm SilkScreenTop Type 2
 0
 Capacitor_SMD
 CP_Elec_3x5.3
-SMT capacitor, aluminium electrolytic, 3x5.3, Cornell Dubilier Electronics 
+SMT capacitor, aluminium electrolytic, 3x5.3, Cornell Dubilier Electronics
 Capacitor Electrolytic
 0
 2
@@ -6351,7 +6351,7 @@ SFP+ SFP
 Connector
 DTF13-12Px
 http://www.te.com/usa-en/product-DTF13-12PA-G003.html
-DEUTSCH DT header 12 pin 
+DEUTSCH DT header 12 pin
 0
 12
 12
@@ -6372,7 +6372,7 @@ pin header 4-pin CPU fan
 Connector
 GB042-34S-H10
 http://www.lsmtron.com/pdf/Connector&Antenna_catalog.PDF
-34pin SMD connector 
+34pin SMD connector
 0
 34
 34
@@ -8206,7 +8206,7 @@ BNC RF interface bayonet 50ohm
 Connector_Coaxial
 BNC_TEConnectivity_1478204_Vertical
 BNC female PCB mount 4 pin straight chassis connector http://www.te.com/usa-en/product-1-1478204-0.html
-BNC female PCB mount 4 pin straight chassis connector 
+BNC female PCB mount 4 pin straight chassis connector
 0
 5
 2
@@ -11076,7 +11076,7 @@ hdmi micro type d right angle tht
 Connector_HDMI
 HDMI_Micro-D_Molex_46765-2x0x
 HDMI, Micro, Type D, THT/SMD hybrid, 0.4mm pitch, 19 ckt, right angle (http://www.molex.com/pdm_docs/sd/467651301_sd.pdf)
-hdmi micro type d right angle tht smd hybrid 
+hdmi micro type d right angle tht smd hybrid
 0
 23
 20
@@ -42842,7 +42842,7 @@ FMC HPC
 Connector_Samtec
 Samtec_FMC_ASP-134604-01_4x40_Vertical
 https://suddendocs.samtec.com/prints/asp-134604-01-mkt.pdf
-FMC LPC VITA 
+FMC LPC VITA
 0
 160
 160
@@ -49457,14 +49457,14 @@ connector wire 2sqmm double-strain-relief
 Connector_Wire
 SolderWirePad_1x01_SMD_1x2mm
 Wire Pad, Square, SMD Pad,  1mm x 2mm,
-MesurementPoint Square SMDPad 1mmx2mm 
+MesurementPoint Square SMDPad 1mmx2mm
 0
 1
 1
 Connector_Wire
 SolderWirePad_1x01_SMD_5x10mm
 Wire Pad, Square, SMD Pad,  5mm x 10mm,
-MesurementPoint Square SMDPad 5mmx10mm 
+MesurementPoint Square SMDPad 5mmx10mm
 0
 1
 1
@@ -49715,21 +49715,21 @@ DCDC SMD
 7
 Converter_DCDC
 Converter_DCDC_Bothhand_CFUDxxxx_THT
-DCDC-Converter, BOTHHAND, Type CFxxxx-Serie,  (Very dodgy url but was the only at hand), 
+DCDC-Converter, BOTHHAND, Type CFxxxx-Serie,  (Very dodgy url but was the only at hand),
 DCDC-Converter BOTHHAND Type CFxxxx-Serie
 0
 10
 10
 Converter_DCDC
 Converter_DCDC_Bothhand_CFUSxxxxEH_THT
-DCDC-Converter, BOTHHAND, Type CFxxxx-Serie,  (Very dodgy url but was the only at hand), 
+DCDC-Converter, BOTHHAND, Type CFxxxx-Serie,  (Very dodgy url but was the only at hand),
 DCDC-Converter BOTHHAND Type CFxxxx-Serie
 0
 9
 9
 Converter_DCDC
 Converter_DCDC_Bothhand_CFUSxxxx_THT
-DCDC-Converter, BOTHHAND, Type CFxxxx-Serie,  (Very dodgy url but was the only at hand), 
+DCDC-Converter, BOTHHAND, Type CFxxxx-Serie,  (Very dodgy url but was the only at hand),
 DCDC-Converter BOTHHAND Type CFxxxx-Serie
 0
 8
@@ -49779,7 +49779,7 @@ Power Module uPOL MUN12AD03
 Converter_DCDC
 Converter_DCDC_MeanWell_NID30_THT
 Meanwell DCDC non-isolated converter SIP module, http://www.meanwell.com/webapp/product/search.aspx?prod=nid30
-DCDC non-isolated converter 
+DCDC non-isolated converter
 0
 11
 11
@@ -49933,7 +49933,7 @@ dc-dc recom buck sip-12 pitch 2.54mm
 Converter_DCDC
 Converter_DCDC_RECOM_RCD-24_THT
 Constant current LED Driver DC/DC Converter, https://g.recomcdn.com/media/Datasheet/pdf/.fYUQjOlW/.t2a80a771bdbb0ef300f7/Datasheet-93/RCD-24.pdf
-Led Driver DC-DC 
+Led Driver DC-DC
 0
 6
 6
@@ -51627,14 +51627,14 @@ diode handsolder
 Diode_SMD
 D_MELF
 Diode, MELF,,
-Diode MELF 
+Diode MELF
 0
 2
 2
 Diode_SMD
 D_MELF-RM10_Universal_Handsoldering
 Diode, Universal, MELF, RM10, Handsoldering, SMD, Thruhole,
-Diode Universal MELF RM10 Handsoldering SMD Thruhole 
+Diode Universal MELF RM10 Handsoldering SMD Thruhole
 0
 2
 2
@@ -51767,7 +51767,7 @@ Diode SMA (DO-214AC)
 Diode_SMD
 D_SMA-SMB_Universal_Handsoldering
 Diode, Universal, SMA (DO-214AC) or SMB (DO-214AA), Handsoldering,
-Diode Universal SMA (DO-214AC) SMB (DO-214AA) Handsoldering 
+Diode Universal SMA (DO-214AC) SMB (DO-214AA) Handsoldering
 0
 2
 2
@@ -51788,7 +51788,7 @@ Diode SMB (DO-214AA)
 Diode_SMD
 D_SMB-SMC_Universal_Handsoldering
 Diode, Universal, SMB(DO-214AA) or SMC (DO-214AB), Handsoldering,
-Diode Universal SMB(DO-214AA) SMC (DO-214AB) Handsoldering 
+Diode Universal SMB(DO-214AA) SMC (DO-214AB) Handsoldering
 0
 2
 2
@@ -52782,14 +52782,14 @@ AG12864E Graphics Display 128x64 Ampire
 Display
 Adafruit_SSD1306
 Adafruit SSD1306 OLED 1.3 inch 128x64 I2C & SPI https://learn.adafruit.com/monochrome-oled-breakouts/downloads
-Adafruit SSD1306 OLED 1.3 inch 128x64 I2C & SPI 
+Adafruit SSD1306 OLED 1.3 inch 128x64 I2C & SPI
 0
 8
 8
 Display
 Adafruit_SSD1306_No_Mounting_Holes
 Adafruit SSD1306 OLED 1.3 inch 128x64 I2C & SPI https://learn.adafruit.com/monochrome-oled-breakouts/downloads
-Adafruit SSD1306 OLED 1.3 inch 128x64 I2C & SPI 
+Adafruit SSD1306 OLED 1.3 inch 128x64 I2C & SPI
 0
 8
 8
@@ -53209,28 +53209,28 @@ http://www.display-elektronik.de/filter/DE113-RS-20_635.pdf
 Display_7Segment
 DE119-XX-XX
 https://www.display-elektronik.de/filter/DE119-RS-20_635.pdf
-4 digit 7 segment LCD 
+4 digit 7 segment LCD
 0
 40
 40
 Display_7Segment
 DE122-XX-XX
 http://www.display-elektronik.de/filter/DE122-RS-20_635.pdf
-6 digit 7 segment LCD 
+6 digit 7 segment LCD
 0
 50
 50
 Display_7Segment
 DE152-XX-XX
 https://tft-module.de/filter/DE152-RS-20_75.pdf
-4 digit 7 segment LCD 
+4 digit 7 segment LCD
 0
 40
 40
 Display_7Segment
 DE170-XX-XX
 http://www.display-elektronik.de/filter/DE170-RS-20_75.pdf
-3 1/5 digit reflective arrow bat + 7 segment LCD 
+3 1/5 digit reflective arrow bat + 7 segment LCD
 0
 40
 40
@@ -54056,21 +54056,21 @@ Bourns Fuse NoLead
 Fuse
 Fuse_Littelfuse-LVR100
 Littelfuse, resettable fuse, PTC, polyswitch LVR100, Ih 1A http://www.littelfuse.com/~/media/electronics/datasheets/resettable_ptcs/littelfuse_ptc_lvr_catalog_datasheet.pdf.pdf
-LVR100 PTC resettable polyswitch 
+LVR100 PTC resettable polyswitch
 0
 2
 2
 Fuse
 Fuse_Littelfuse-LVR125
 Littelfuse, resettable fuse, PTC, polyswitch LVR125, Ih 1.25A, http://www.littelfuse.com/~/media/electronics/datasheets/resettable_ptcs/littelfuse_ptc_lvr_catalog_datasheet.pdf.pdf
-LVR125 PTC resettable polyswitch 
+LVR125 PTC resettable polyswitch
 0
 2
 2
 Fuse
 Fuse_Littelfuse-LVR200
 Littelfuse, resettable fuse, PTC, polyswitch LVR200, Ih 2A, http://www.littelfuse.com/~/media/electronics/datasheets/resettable_ptcs/littelfuse_ptc_lvr_catalog_datasheet.pdf.pdf
-LVR200 PTC resettable polyswitch 
+LVR200 PTC resettable polyswitch
 0
 2
 2
@@ -54091,7 +54091,7 @@ fuse tht radial
 Fuse
 Fuse_Littelfuse_395Series
 Fuse, TE5, Littelfuse/Wickmann, No. 460, No560,
-Fuse TE5 Littelfuse/Wickmann No. 460 No560 
+Fuse TE5 Littelfuse/Wickmann No. 460 No560
 0
 2
 2
@@ -54266,14 +54266,14 @@ fuse clip open
 Fuse
 Fuseholder_Cylinder-5x20mm_Bulgin_FX0456_Vertical_Closed
 Fuseholder, 5x20, closed, vertical, Bulgin, FX0456, https://www.bulgin.com/products/pub/media/bulgin/data/Fuseholders.pdf
-Fuseholder 5x20 closed vertical Bulgin FX0456 Sicherungshalter 
+Fuseholder 5x20 closed vertical Bulgin FX0456 Sicherungshalter
 0
 2
 2
 Fuse
 Fuseholder_Cylinder-5x20mm_Bulgin_FX0457_Horizontal_Closed
 Fuseholder, 5x20, closed, horizontal, Bulgin, FX0457, Sicherungshalter,
-Fuseholder 5x20 closed horizontal Bulgin FX0457 Sicherungshalter 
+Fuseholder 5x20 closed horizontal Bulgin FX0457 Sicherungshalter
 0
 2
 2
@@ -54427,7 +54427,7 @@ SMD Nano2 holder
 Fuse
 Fuseholder_TR5_Littelfuse_No560_No460
 Fuse, Fuseholder, TR5, Littelfuse/Wickmann, No. 460, No560, https://www.littelfuse.com/~/media/electronics/datasheets/fuse_holders/littelfuse_fuse_holder_559_560_datasheet.pdf.pdf
-Fuse Fuseholder TR5 Littelfuse/Wickmann No. 460 No560 
+Fuse Fuseholder TR5 Littelfuse/Wickmann No. 460 No560
 0
 2
 2
@@ -54483,7 +54483,7 @@ heatsink
 Heatsink
 Heatsink_AAVID_TV5G_TO220_Horizontal
 Heatsink TV5G TO-220 Horizontal, https://www.shopaavid.com/Product/TV-5G
-Heatsink TV5G TO-220 Horizontal 
+Heatsink TV5G TO-220 Horizontal
 0
 0
 0
@@ -54903,7 +54903,7 @@ Bourns SRP1245A SMD inductor
 Inductor_SMD
 L_Bourns_SRP1770TA_16.9x16.9mm
 Bourns SRP1770TA series SMD Inductor http://www.bourns.com/docs/Product-Datasheets/SRP1770TA.pdf
-Bourns SRP1770TA series SMD Inductor 
+Bourns SRP1770TA series SMD Inductor
 0
 2
 2
@@ -55799,28 +55799,28 @@ Inductor ferrite multilayer power
 Inductor_SMD
 L_Fastron_PISN
 Choke, Drossel, PISN, SMD, Fastron,
-Choke Drossel PISN SMD Fastron 
+Choke Drossel PISN SMD Fastron
 0
 2
 2
 Inductor_SMD
 L_Fastron_PISN_Handsoldering
 Choke, Drossel, PISN, SMD, Fastron,
-Choke Drossel PISN SMD Fastron 
+Choke Drossel PISN SMD Fastron
 0
 2
 2
 Inductor_SMD
 L_Fastron_PISR
 Choke, Drossel, PISR, Fastron, SMD,
-Choke Drossel PISR Fastron SMD 
+Choke Drossel PISR Fastron SMD
 0
 2
 2
 Inductor_SMD
 L_Fastron_PISR_Handsoldering
 Choke, Drossel, PISR, Fastron, SMD,
-Choke Drossel PISR Fastron SMD 
+Choke Drossel PISR Fastron SMD
 0
 2
 2
@@ -56219,7 +56219,7 @@ inductor sagami cwr12xx smd
 Inductor_SMD
 L_SigTra_SC3316F
 http://www.signaltransformer.com/sites/all/pdf/smd/P080_SC3316F.pdf
-Choke 
+Choke
 0
 2
 2
@@ -57535,7 +57535,7 @@ inductor Wuerth smd
 Inductor_SMD
 L_Wuerth_WE-DD-Typ-L-Typ-XL-Typ-XXL
 Shielded Coupled Inductor, Wuerth Elektronik, WE-DD, SMD, Typ L, Typ XL, Typ XXL, https://katalog.we-online.com/pbs/datasheet/744874001.pdf
-Choke Coupled Double Inductor SMD Wuerth WE-DD TypL TypXL TypXXL 
+Choke Coupled Double Inductor SMD Wuerth WE-DD TypL TypXL TypXXL
 0
 4
 4
@@ -58466,42 +58466,42 @@ common mode filter
 Inductor_THT
 L_CommonMode_Wuerth_WE-CMB-L
 Wuerth, WE-CMB, Bauform L,
-CommonModeChoke Gleichtaktdrossel 
+CommonModeChoke Gleichtaktdrossel
 0
 4
 4
 Inductor_THT
 L_CommonMode_Wuerth_WE-CMB-M
 Wuerth, WE-CMB, Bauform M,
-CommonModeChoke Gleichtaktdrossel 
+CommonModeChoke Gleichtaktdrossel
 0
 4
 4
 Inductor_THT
 L_CommonMode_Wuerth_WE-CMB-S
 Wuerth, WE-CMB, Bauform S,
-CommonModeChoke Gleichtaktdrossel 
+CommonModeChoke Gleichtaktdrossel
 0
 4
 4
 Inductor_THT
 L_CommonMode_Wuerth_WE-CMB-XL
 Wuerth, WE-CMB, Bauform XL,
-CommonModeChoke Gleichtaktdrossel 
+CommonModeChoke Gleichtaktdrossel
 0
 4
 4
 Inductor_THT
 L_CommonMode_Wuerth_WE-CMB-XS
 Wuerth, WE-CMB, Bauform XS,
-CommonModeChoke Gleichtaktdrossel 
+CommonModeChoke Gleichtaktdrossel
 0
 4
 4
 Inductor_THT
 L_CommonMode_Wuerth_WE-CMB-XXL
 Wuerth, WE-CMB, Bauform XXL,
-CommonModeChoke Gleichtaktdrossel 
+CommonModeChoke Gleichtaktdrossel
 0
 4
 4
@@ -59999,7 +59999,7 @@ dual led smd
 LED_SMD
 LED_Kingbright_APDA3020VBCD
 LED, SMD, APDA3020VBC/D, https://www.kingbrightusa.com/images/catalog/SPEC/APDA3020VBC-D.pdf
-LED APDA3020VBC/D Kingbright 
+LED APDA3020VBC/D Kingbright
 0
 2
 2
@@ -60146,7 +60146,7 @@ LED RGB right-angle
 LED_SMD
 LED_RGB_Getian_GT-P6PRGB4303
 https://www.gme.sk/img/cache/doc/518/177/vykonova-led-getian-gt-p6prgb4303-datasheet-1.pdf
-LED RGB 
+LED RGB
 0
 7
 7
@@ -60223,7 +60223,7 @@ LED RGB NeoPixel
 LED_SMD
 LED_Wurth_150044M155260
 Wurth Common anode RGB LED, SMD, 0404, 1x1x1.65mm, https://www.we-online.com/catalog/datasheet/150044M155260.pdf
-LED RGB ARGB 
+LED RGB ARGB
 0
 4
 4
@@ -63716,7 +63716,7 @@ Laser Diode TO56
 OptoDevice
 Lightpipe_Bivar_RLP1-400-650
 1-way, 2.8mm lightpipe, 10mm lens output height, 17mm protrusion, https://www.bivar.com/parts_content/Datasheets/RLP1-XXX-XXX.pdf
-planar light pipe 1 way 3mm 
+planar light pipe 1 way 3mm
 0
 0
 0
@@ -63933,7 +63933,7 @@ Resistor LDR5.1x3.4mm
 OptoDevice
 R_LDR_5.2x5.2mm_P3.5mm_Horizontal
 Resistor, LDR 5.2x5.2, upright, see http://cdn-reichelt.de/documents/datenblatt/A500/M996011A.pdf
-Resistor LDR5.2x5.2 
+Resistor LDR5.2x5.2
 0
 2
 2
@@ -63975,7 +63975,7 @@ Resistor LDRD=6.4mm
 OptoDevice
 R_LDR_D13.8mm_P9.0mm_Vertical
 Resistor, diameter 13.8mm pitch 9mm, see http://yourduino.com/docs/Photoresistor-5516-datasheet.pdf
-Resistor LDR 
+Resistor LDR
 0
 2
 2
@@ -66649,7 +66649,7 @@ QFN 0.95
 Package_DFN_QFN
 AO_DFN-8-1EP_5.55x5.2mm_P1.27mm_EP4.12x4.6mm
 DD Package; 8-Lead Plastic DFN (5.55mm x 5.2mm), Pin 5-8 connected to EP (http://www.aosmd.com/res/packaging_information/DFN5x6_8L_EP1_P.pdf)
-dfn 
+dfn
 0
 25
 5
@@ -66725,7 +66725,7 @@ DFN NoLead
 7
 Package_DFN_QFN
 DFN-6_1.3x1.2mm_P0.4mm
-6-Lead Plastic DFN (1.3mm x 1.2mm) 
+6-Lead Plastic DFN (1.3mm x 1.2mm)
 DFN 0.4
 0
 6
@@ -66894,14 +66894,14 @@ DFN 0.8
 Package_DFN_QFN
 DFN-8-1EP_6x5mm_P1.27mm_EP2x2mm
 DD Package; 8-Lead Plastic DFN (6mm x 5mm) (see http://www.everspin.com/file/236/download)
-dfn 
+dfn
 0
 13
 9
 Package_DFN_QFN
 DFN-8-1EP_6x5mm_P1.27mm_EP4x4mm
 DD Package; 8-Lead Plastic DFN (6mm x 5mm) (see http://www.everspin.com/file/236/download)
-dfn 
+dfn
 0
 25
 9
@@ -67194,7 +67194,7 @@ UDFN-10 U-DFN2510-10 Diodes
 10
 Package_DFN_QFN
 Diodes_UDFN2020-6_Type-F
-U-DFN2020-6 (Type F) (https://www.diodes.com/assets/Package-Files/U-DFN2020-6-Type-F.pdf) 
+U-DFN2020-6 (Type F) (https://www.diodes.com/assets/Package-Files/U-DFN2020-6-Type-F.pdf)
 U-DFN2020-6 (Type F)
 0
 8
@@ -67496,7 +67496,7 @@ NXP LQFN NoLead
 Package_DFN_QFN
 Nordic_AQFN-73-1EP_7x7mm_P0.5mm
 http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.nrf52%2Fdita%2Fnrf52%2Fchips%2Fnrf52840.html
-AQFN 7mm 
+AQFN 7mm
 0
 78
 74
@@ -72970,14 +72970,14 @@ EQFP QFP
 Package_QFP
 HTQFP-64-1EP_10x10mm_P0.5mm_EP8x8mm
 64-Lead Plastic Thin Quad Flatpack (PT) - 10x10x1 mm Body, 2.00 mm Footprint [HTQFP] thermal pad
-HTQFP-64 Pitch 0.5 
+HTQFP-64 Pitch 0.5
 0
 69
 65
 Package_QFP
 HTQFP-64-1EP_10x10mm_P0.5mm_EP8x8mm_Mask4.4x4.4mm_ThermalVias
 64-Lead Plastic Thin Quad Flatpack (PT) - 10x10x1 mm Body, 2.00 mm Footprint [HTQFP] thermal pad
-HTQFP-64 Pitch 0.5 
+HTQFP-64 Pitch 0.5
 0
 135
 65
@@ -73355,7 +73355,7 @@ TQFP QFP
 Package_QFP
 TQFP-64-1EP_10x10mm_P0.5mm_EP8x8mm
 64-Lead Plastic Thin Quad Flatpack (PT) - 10x10x1 mm Body, 2.00 mm Footprint [TQFP] thermal pad
-QFP 0.5 
+QFP 0.5
 0
 90
 65
@@ -74083,7 +74083,7 @@ DSO-20
 Package_SO
 Infineon_PG-TSDSO-14-22
 Infineon_PG-TSDSO-14-22
-Infineon TSDSO 14-22 
+Infineon TSDSO 14-22
 0
 17
 15
@@ -74314,7 +74314,7 @@ MSOP SO
 Package_SO
 ONSemi_SO-8FL_488AA
 ON Semi DFN5 5x6mm 1.27P SO-8FL CASE 488A https://www.onsemi.com/pub/Collateral/488AA.PDF
-ON Semi DFN5 5x6mm 1.27P SO-8FL CASE 488A 
+ON Semi DFN5 5x6mm 1.27P SO-8FL CASE 488A
 0
 5
 5
@@ -74531,7 +74531,7 @@ SO SO
 Package_SO
 SO-20_12.8x7.5mm_P1.27mm
 SO-20, 12.8x7.5mm, https://www.nxp.com/docs/en/data-sheet/SA605.pdf
-S0-20 
+S0-20
 0
 20
 20
@@ -76470,7 +76470,7 @@ WSON NoLead
 Package_SON
 WSON-10-1EP_2x3mm_P0.5mm_EP0.84x2.4mm
 WSON-10 package 2x3mm body, pitch 0.5mm, see http://www.ti.com/lit/ds/symlink/tps62177.pdf
-WSON 0.5 
+WSON 0.5
 0
 14
 11
@@ -76547,7 +76547,7 @@ TSOC-6
 Package_TO_SOT_SMD
 ATPAK-2
 ATPAK SMD package, http://www.onsemi.com/pub/Collateral/ENA2192-D.PDF
-ATPAK 
+ATPAK
 0
 7
 3
@@ -77099,8 +77099,8 @@ SOT-1123 transistor
 3
 Package_TO_SOT_SMD
 SOT-1333-1
-SOT-1333-1 
-SOT-1333-1 
+SOT-1333-1
+SOT-1333-1
 0
 9
 9
@@ -77135,7 +77135,7 @@ SuperSOT-8 SSOT-8
 Package_TO_SOT_SMD
 TDSON-8-1
 Power MOSFET package, TDSON-8-1, 5.15x5.9mm (https://www.infineon.com/cms/en/product/packages/PG-TDSON/PG-TDSON-8-1/)
-tdson 
+tdson
 0
 14
 5
@@ -77576,42 +77576,42 @@ TR TO-3 TO3 TO-204
 Package_TO_SOT_THT
 TO-3P-3_Horizontal_TabDown
 TO-3P-3, Horizontal, RM 5.45mm, , see https://toshiba.semicon-storage.com/ap-en/design-support/package/detail.TO-3P(N).html
-TO-3P-3 Horizontal RM 5.45mm 
+TO-3P-3 Horizontal RM 5.45mm
 0
 3
 3
 Package_TO_SOT_THT
 TO-3P-3_Horizontal_TabUp
 TO-3P-3, Horizontal, RM 5.45mm, , see https://toshiba.semicon-storage.com/ap-en/design-support/package/detail.TO-3P(N).html
-TO-3P-3 Horizontal RM 5.45mm 
+TO-3P-3 Horizontal RM 5.45mm
 0
 3
 3
 Package_TO_SOT_THT
 TO-3P-3_Vertical
 TO-3P-3, Vertical, RM 5.45mm, , see https://toshiba.semicon-storage.com/ap-en/design-support/package/detail.TO-3P(N).html
-TO-3P-3 Vertical RM 5.45mm 
+TO-3P-3 Vertical RM 5.45mm
 0
 3
 3
 Package_TO_SOT_THT
 TO-3PB-3_Horizontal_TabDown
 TO-3PB-3, Horizontal, RM 5.45mm, , see http://www.onsemi.com/pub/Collateral/340AC.PDF
-TO-3PB-3 Horizontal RM 5.45mm 
+TO-3PB-3 Horizontal RM 5.45mm
 0
 3
 3
 Package_TO_SOT_THT
 TO-3PB-3_Horizontal_TabUp
 TO-3PB-3, Horizontal, RM 5.45mm, , see http://www.onsemi.com/pub/Collateral/340AC.PDF
-TO-3PB-3 Horizontal RM 5.45mm 
+TO-3PB-3 Horizontal RM 5.45mm
 0
 3
 3
 Package_TO_SOT_THT
 TO-3PB-3_Vertical
 TO-3PB-3, Vertical, RM 5.45mm, , see http://www.onsemi.com/pub/Collateral/340AC.PDF
-TO-3PB-3 Vertical RM 5.45mm 
+TO-3PB-3 Vertical RM 5.45mm
 0
 3
 3
@@ -78248,7 +78248,7 @@ TO-92L Molded Wide transistor
 Package_TO_SOT_THT
 TO-92Mini-2
 TO-92Mini package, drill 0.6mm (https://media.digikey.com/pdf/Data%20Sheets/Infineon%20PDFs/KT,KTY.pdf)
-to-92Mini transistor 
+to-92Mini transistor
 0
 2
 2
@@ -80340,7 +80340,7 @@ GSM Module SIM900
 68
 RF_GSM
 Telit_xL865
-Telit xL865 familly footprint, http://www.telit.com/fileadmin/user_upload/products/Downloads/3G/Telit_UL865_Hardware_User_Guide_r8.pdf 
+Telit xL865 familly footprint, http://www.telit.com/fileadmin/user_upload/products/Downloads/3G/Telit_UL865_Hardware_User_Guide_r8.pdf
 xL865 gsm umts
 0
 52
@@ -80901,7 +80901,7 @@ SIGFOX Module
 RF_Module
 Taiyo-Yuden_EYSGJNZWY
 Taiyo Yuden NRF51822 Module Bluetooth https://www.yuden.co.jp/wireless_module/document/datareport2/en/TY_BLE_EYSGJNZ_DataReport_V1_9_20180530E.pdf
-Taiyo Yuden NRF51822 Module Bluetooth 
+Taiyo Yuden NRF51822 Module Bluetooth
 0
 30
 28
@@ -81496,7 +81496,7 @@ spdt relay
 Relay_THT
 Relay_SPDT_Finder_40.11
 Relay SPDT Finder 40.11, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
-Relay SPDT Finder 40.11 
+Relay SPDT Finder 40.11
 0
 5
 5
@@ -82945,21 +82945,21 @@ Resistor Axial_Shunt series Box pin pitch 50.8mm 15W length 47.6mm width 12.7mm 
 Resistor_THT
 R_Bare_Metal_Element_L12.4mm_W4.8mm_P11.40mm
 Resistor, Bare_Metal_Element series, Bare Metal Strip/Wire, Horizontal, pin pitch=11.4mm, 1W, length*width=12.4*4.8mm^2, https://www.bourns.com/pdfs/PWR4412-2S.pdf
-Resistor Bare_Metal_Element series Bare Metal Strip Wire Horizontal pin pitch 11.4mm 1W length 12.4mm width 4.8mm 
+Resistor Bare_Metal_Element series Bare Metal Strip Wire Horizontal pin pitch 11.4mm 1W length 12.4mm width 4.8mm
 0
 2
 2
 Resistor_THT
 R_Bare_Metal_Element_L16.3mm_W4.8mm_P15.30mm
 Resistor, Bare_Metal_Element series, Bare Metal Strip/Wire, Horizontal, pin pitch=15.3mm, 3W, length*width=16.3*4.8mm^2, https://www.bourns.com/pdfs/PWR4412-2S.pdf
-Resistor Bare_Metal_Element series Bare Metal Strip Wire Horizontal pin pitch 15.3mm 3W length 16.3mm width 4.8mm 
+Resistor Bare_Metal_Element series Bare Metal Strip Wire Horizontal pin pitch 15.3mm 3W length 16.3mm width 4.8mm
 0
 2
 2
 Resistor_THT
 R_Bare_Metal_Element_L21.3mm_W4.8mm_P20.30mm
 Resistor, Bare_Metal_Element series, Bare Metal Strip/Wire, Horizontal, pin pitch=20.3mm, 5W, length*width=21.3*4.8mm^2, https://www.bourns.com/pdfs/PWR4412-2S.pdf
-Resistor Bare_Metal_Element series Bare Metal Strip Wire Horizontal pin pitch 20.3mm 5W length 21.3mm width 4.8mm 
+Resistor Bare_Metal_Element series Bare Metal Strip Wire Horizontal pin pitch 20.3mm 5W length 21.3mm width 4.8mm
 0
 2
 2
@@ -83204,7 +83204,7 @@ Winson
 Sensor_Audio
 CUI_CMC-4013-SMT
 Omnidirectional, -42dB, reflowable, electret condenser microphone https://www.cuidevices.com/product/resource/cmc-4013-smt-tr.pdf
-Microphone CUI 
+Microphone CUI
 0
 2
 2
@@ -83785,7 +83785,7 @@ Logo ESD
 Symbol
 EasterEgg_EWG1308-2013_ClassA
 Egg with 42x60mm Body-Size, ClassA, according to EWG1308/2013
-egg easter 
+egg easter
 0
 0
 0
@@ -86375,7 +86375,7 @@ THT Terminal Block Phoenix PT-1,5-16-5.0-H pitch 5mm size 80x9mm^2 drill 1.3mm p
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-2-2,5-V-SMD_1x02-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 2 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814702/pdf
-PhoenixContact PTSM0.5 2 2.5mm vertical SMD spring clamp terminal block connector 
+PhoenixContact PTSM0.5 2 2.5mm vertical SMD spring clamp terminal block connector
 0
 4
 3
@@ -86396,14 +86396,14 @@ THT Terminal Block Phoenix PTSM-0,5-2-2.5-V-THR vertical pitch 2.5mm size 5.5x5m
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-2-HV-2.5-SMD_1x02-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 2 HV 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1778696/pdf
-2.5mm vertical SMD spring clamp terminal block connector 
+2.5mm vertical SMD spring clamp terminal block connector
 0
 4
 3
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-3-2,5-V-SMD_1x03-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 3 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814715/pdf
-PhoenixContact PTSM0.5 3 2.5mm vertical SMD spring clamp terminal block connector 
+PhoenixContact PTSM0.5 3 2.5mm vertical SMD spring clamp terminal block connector
 0
 5
 4
@@ -86424,14 +86424,14 @@ THT Terminal Block Phoenix PTSM-0,5-3-2.5-V-THR vertical pitch 2.5mm size 8x5mm^
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-3-HV-2.5-SMD_1x03-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 3 HV 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1778706/pdf
-2.5mm vertical SMD spring clamp terminal block connector 
+2.5mm vertical SMD spring clamp terminal block connector
 0
 5
 4
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-4-2,5-V-SMD_1x04-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 4 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814728/pdf
-PhoenixContact PTSM0.5 4 2.5mm vertical SMD spring clamp terminal block connector 
+PhoenixContact PTSM0.5 4 2.5mm vertical SMD spring clamp terminal block connector
 0
 6
 5
@@ -86452,14 +86452,14 @@ THT Terminal Block Phoenix PTSM-0,5-4-2.5-V-THR vertical pitch 2.5mm size 10.5x5
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-4-HV-2.5-SMD_1x04-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 4 HV 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1778719/pdf
-2.5mm vertical SMD spring clamp terminal block connector 
+2.5mm vertical SMD spring clamp terminal block connector
 0
 4
 3
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-5-2,5-V-SMD_1x05-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 5 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814731/pdf
-PhoenixContact PTSM0.5 5 2.5mm vertical SMD spring clamp terminal block connector 
+PhoenixContact PTSM0.5 5 2.5mm vertical SMD spring clamp terminal block connector
 0
 7
 6
@@ -86480,14 +86480,14 @@ THT Terminal Block Phoenix PTSM-0,5-5-2.5-V-THR vertical pitch 2.5mm size 13x5mm
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-5-HV-2.5-SMD_1x05-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 5 HV 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1778722/pdf
-2.5mm vertical SMD spring clamp terminal block connector 
+2.5mm vertical SMD spring clamp terminal block connector
 0
 7
 6
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-6-2,5-V-SMD_1x06-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 6 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814744/pdf
-PhoenixContact PTSM0.5 6 2.5mm vertical SMD spring clamp terminal block connector 
+PhoenixContact PTSM0.5 6 2.5mm vertical SMD spring clamp terminal block connector
 0
 8
 7
@@ -86508,14 +86508,14 @@ THT Terminal Block Phoenix PTSM-0,5-6-2.5-V-THR vertical pitch 2.5mm size 15.5x5
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-6-HV-2.5-SMD_1x06-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 6 HV 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1778735/pdf
-2.5mm vertical SMD spring clamp terminal block connector 
+2.5mm vertical SMD spring clamp terminal block connector
 0
 8
 7
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-7-2,5-V-SMD_1x07-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 7 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814757/pdf
-PhoenixContact PTSM0.5 7 2.5mm vertical SMD spring clamp terminal block connector 
+PhoenixContact PTSM0.5 7 2.5mm vertical SMD spring clamp terminal block connector
 0
 9
 8
@@ -86536,14 +86536,14 @@ THT Terminal Block Phoenix PTSM-0,5-7-2.5-V-THR vertical pitch 2.5mm size 18x5mm
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-7-HV-2.5-SMD_1x07-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 7 HV 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1778748/pdf
-2.5mm vertical SMD spring clamp terminal block connector 
+2.5mm vertical SMD spring clamp terminal block connector
 0
 9
 8
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-8-2,5-V-SMD_1x08-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 8 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814760/pdf
-PhoenixContact PTSM0.5 8 2.5mm vertical SMD spring clamp terminal block connector 
+PhoenixContact PTSM0.5 8 2.5mm vertical SMD spring clamp terminal block connector
 0
 10
 9
@@ -86564,7 +86564,7 @@ THT Terminal Block Phoenix PTSM-0,5-8-2.5-V-THR vertical pitch 2.5mm size 20.5x5
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-8-HV-2.5-SMD_1x08-1MP_P2.50mm_Vertical
 PhoenixContact PTSM0,5 8 HV 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1778751/pdf
-2.5mm vertical SMD spring clamp terminal block connector 
+2.5mm vertical SMD spring clamp terminal block connector
 0
 10
 9
@@ -88775,7 +88775,7 @@ test point THT pad
 1
 TestPoint
 TestPoint_THTPad_D2.5mm_Drill1.2mm
-THT pad as test Point, diameter 2.5mm, hole diameter 1.2mm 
+THT pad as test Point, diameter 2.5mm, hole diameter 1.2mm
 test point THT pad
 0
 1
@@ -88972,70 +88972,70 @@ Murata transformer
 Transformer_SMD
 Transformer_NF_ETAL_P2781
 NF-Transformer, ETAL, P2781, SMD,
-NF-Transformer ETAL P2781 SMD 
+NF-Transformer ETAL P2781 SMD
 0
 8
 7
 Transformer_SMD
 Transformer_NF_ETAL_P2781_HandSoldering
 NF-Transformer, ETAL, P2781, SMD, Handsoldering
-NF-Transformer ETAL P2781 SMD Handsoldering 
+NF-Transformer ETAL P2781 SMD Handsoldering
 0
 8
 7
 Transformer_SMD
 Transformer_NF_ETAL_P3000
 NF-Reansformer, ETAL, P3000, SMD,
-NF-Reansformer ETAL P3000 SMD 
+NF-Reansformer ETAL P3000 SMD
 0
 15
 13
 Transformer_SMD
 Transformer_NF_ETAL_P3000_HandSoldering
 NF-Reansformer, ETAL, P3000, SMD, Handsoldering,
-NF-Reansformer ETAL P3000 SMD Handsoldering 
+NF-Reansformer ETAL P3000 SMD Handsoldering
 0
 15
 13
 Transformer_SMD
 Transformer_NF_ETAL_P3181
 NF-Transformer, ETAL, P3181, SMD,
-NF-Transformer ETAL P3181 SMD 
+NF-Transformer ETAL P3181 SMD
 0
 7
 6
 Transformer_SMD
 Transformer_NF_ETAL_P3181_HandSoldering
 NF-Transformer, ETAL, P3181, SMD, Hand Soldering,
-NF-Transformer ETAL P3181 SMD Hand Soldering 
+NF-Transformer ETAL P3181 SMD Hand Soldering
 0
 7
 6
 Transformer_SMD
 Transformer_NF_ETAL_P3188
 NF-Transformer, ETAL, P3188, SMD,
-NF-Transformer ETAL P3188 SMD 
+NF-Transformer ETAL P3188 SMD
 0
 8
 6
 Transformer_SMD
 Transformer_NF_ETAL_P3188_HandSoldering
 NF-Transformer, ETAL, P3188, SMD, Handsoldering,
-NF-Transformer ETAL P3188 SMD Handsoldering 
+NF-Transformer ETAL P3188 SMD Handsoldering
 0
 8
 6
 Transformer_SMD
 Transformer_NF_ETAL_P3191
 NF-Transformer, ETAL, P3191, SMD,
-NF-Transformer ETAL P3191 SMD 
+NF-Transformer ETAL P3191 SMD
 0
 8
 6
 Transformer_SMD
 Transformer_NF_ETAL_P3191_HandSoldering
 NF-Transformer, ETAL, P3191, SMD, Handsoldering,
-NF-Transformer ETAL P3191 SMD Handsoldering 
+NF-Transformer ETAL P3191 SMD Handsoldering
 0
 8
 6
@@ -89063,28 +89063,28 @@ auxiliary gate drive transformer
 Transformer_THT
 Autotransformer_Toroid_1Tap_Horizontal_D9.0mm_Amidon-T30
 Autotransformer, Toroid, horizontal, laying, 1 Tap, Diameter 9mm, Amidon T30,
-Autotransformer Toroid horizontal laying 1 Tap Diameter 9mm Amidon T30 
+Autotransformer Toroid horizontal laying 1 Tap Diameter 9mm Amidon T30
 0
 3
 3
 Transformer_THT
 Autotransformer_Toroid_1Tap_Horizontal_D10.5mm_Amidon-T37
 Autotransformer, Toroid, horizontal, laying, 1 Tap, Diameter 10,5mm, Amidon T37,
-Autotransformer Toroid horizontal laying 1 Tap Diameter 10 5mm Amidon T37 
+Autotransformer Toroid horizontal laying 1 Tap Diameter 10 5mm Amidon T37
 0
 3
 3
 Transformer_THT
 Autotransformer_Toroid_1Tap_Horizontal_D12.5mm_Amidon-T44
 Autotransformer, Toroid, horizontal, laying, 1 Tap, Diameter 12,5mm, Amidon T44,
-Autotransformer Toroid horizontal laying 1 Tap Diameter 12 5mm Amidon T44 
+Autotransformer Toroid horizontal laying 1 Tap Diameter 12 5mm Amidon T44
 0
 3
 3
 Transformer_THT
 Autotransformer_Toroid_1Tap_Horizontal_D14.0mm_Amidon-T50
 Choke, Inductance, Autotransformer, Toroid, horizontal, laying, 1 Tap, Diameter 14mm, Amidon T50,
-Choke Inductance Autotransformer Toroid horizontal laying 1 Tap Diameter 14mm Amidon T50 
+Choke Inductance Autotransformer Toroid horizontal laying 1 Tap Diameter 14mm Amidon T50
 0
 3
 3
@@ -89147,182 +89147,182 @@ TEZ PCB Transformer
 Transformer_THT
 Transformer_CHK_EI30-2VA_1xSec
 Trafo, Printtrafo, CHK, EI30, 2VA, 1x Sec,http://www.eratransformers.com/downloads/030-7585.0.pdf
-Trafo Printtrafo CHK EI30 2VA 1x Sec 
+Trafo Printtrafo CHK EI30 2VA 1x Sec
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI30-2VA_2xSec
 Trafo, Printtrafo, CHK, EI30, 2VA, 2x Sec,
-Trafo Printtrafo CHK EI30 2VA 2x Sec 
+Trafo Printtrafo CHK EI30 2VA 2x Sec
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI30-2VA_Neutral
 Trafo, Printtrafo, CHK, EI30, 2VA, neutral,
-Trafo Printtrafo CHK EI30 2VA neutral 
+Trafo Printtrafo CHK EI30 2VA neutral
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI38-3VA_1xSec
 Trafo, Printtrafo, CHK, EI38, 3VA, 1x Sec, http://www.eratransformers.com/product-detail/20
-Trafo Printtrafo CHK EI38 3VA 1x Sec 
+Trafo Printtrafo CHK EI38 3VA 1x Sec
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI38-3VA_2xSec
 Trafo, Printtrafo, CHK, EI38, 3VA, 2x Sec, http://www.eratransformers.com/product-detail/20
-Trafo Printtrafo CHK EI38 3VA 2x Sec 
+Trafo Printtrafo CHK EI38 3VA 2x Sec
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI38-3VA_Neutral
 Trafo, Printtrafo, CHK, EI38, 3VA, neutral, http://www.eratransformers.com/product-detail/20
-Trafo Printtrafo CHK EI42 3VA neutral 
+Trafo Printtrafo CHK EI42 3VA neutral
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI42-5VA_1xSec
 Trafo, Printtrafo, CHK, EI42, 5VA, 1x Sec,
-Trafo Printtrafo CHK EI42 5VA 1x Sec 
+Trafo Printtrafo CHK EI42 5VA 1x Sec
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI42-5VA_2xSec
 Trafo, Printtrafo, CHK, EI42, 5VA, 2x Sec,
-Trafo Printtrafo CHK EI42 5VA 2x Sec 
+Trafo Printtrafo CHK EI42 5VA 2x Sec
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI42-5VA_Neutral
 Trafo, Printtrafo, CHK, EI42, 5VA, neutral,
-Trafo Printtrafo CHK EI42 5VA neutral 
+Trafo Printtrafo CHK EI42 5VA neutral
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI48-8VA_1xSec
 Trafo, Printtrafo, CHK, EI48, 8VA, 1x Sec, http://www.eratransformers.com/product-detail/18
-Trafo Printtrafo CHK EI48 8VA 1x Sec 
+Trafo Printtrafo CHK EI48 8VA 1x Sec
 0
 12
 12
 Transformer_THT
 Transformer_CHK_EI48-8VA_2xSec
 Trafo, Printtrafo, CHK, EI48, 8VA, 2x Sec, http://www.eratransformers.com/product-detail/18
-Trafo Printtrafo CHK EI48 8VA 2x Sec 
+Trafo Printtrafo CHK EI48 8VA 2x Sec
 0
 12
 12
 Transformer_THT
 Transformer_CHK_EI48-8VA_Neutral
 Trafo, Printtrafo, CHK, EI48, 8VA, neutral, http://www.eratransformers.com/product-detail/18
-Trafo Printtrafo CHK EI48 8VA neutral 
+Trafo Printtrafo CHK EI48 8VA neutral
 0
 12
 12
 Transformer_THT
 Transformer_CHK_EI48-10VA_1xSec
 Trafo, Printtrafo, CHK, EI48, 10VA, 1x Sec,
-Trafo Printtrafo CHK EI48 10VA 1x Sec 
+Trafo Printtrafo CHK EI48 10VA 1x Sec
 0
 12
 12
 Transformer_THT
 Transformer_CHK_EI48-10VA_2xSec
 Trafo, Printtrafo, CHK, EI48, 10VA, 2x Sec, http://www.eratransformers.com/product-detail/18
-Trafo Printtrafo CHK EI48 10VA 2x Sec 
+Trafo Printtrafo CHK EI48 10VA 2x Sec
 0
 12
 12
 Transformer_THT
 Transformer_CHK_EI48-10VA_Neutral
 Trafo, Printtrafo, CHK, EI48, 10VA, neutral, http://www.eratransformers.com/product-detail/18
-Trafo Printtrafo CHK EI48 10VA neutral 
+Trafo Printtrafo CHK EI48 10VA neutral
 0
 12
 12
 Transformer_THT
 Transformer_CHK_EI54-12VA_1xSec
 Trafo, Printtrafo, CHK, EI54, 12VA, 1x Sec,http://www.eratransformers.com/product-detail/19
-Trafo Printtrafo CHK EI54 12VA 1x Sec 
+Trafo Printtrafo CHK EI54 12VA 1x Sec
 0
 14
 14
 Transformer_THT
 Transformer_CHK_EI54-12VA_2xSec
 Trafo, Printtrafo, CHK, EI54, 12VA, 2x Sec,http://www.eratransformers.com/product-detail/19
-Trafo Printtrafo CHK EI54 12VA 2x Sec 
+Trafo Printtrafo CHK EI54 12VA 2x Sec
 0
 14
 14
 Transformer_THT
 Transformer_CHK_EI54-12VA_Neutral
 Trafo, Printtrafo, CHK, EI54, 12VA, neutral,http://www.eratransformers.com/product-detail/19
-Trafo Printtrafo CHK EI54 12VA neutral 
+Trafo Printtrafo CHK EI54 12VA neutral
 0
 14
 14
 Transformer_THT
 Transformer_CHK_EI54-16VA_1xSec
 Trafo, Printtrafo, CHK, EI54, 16VA, 1x Sec,http://www.eratransformers.com/product-detail/19
-Trafo Printtrafo CHK EI54 16VA 1x Sec 
+Trafo Printtrafo CHK EI54 16VA 1x Sec
 0
 14
 14
 Transformer_THT
 Transformer_CHK_EI54-16VA_2xSec
 Trafo, Printtrafo, CHK, EI54, 16VA, 2x Sec,http://www.eratransformers.com/product-detail/19
-Trafo Printtrafo CHK EI54 16VA 2x Sec 
+Trafo Printtrafo CHK EI54 16VA 2x Sec
 0
 14
 14
 Transformer_THT
 Transformer_CHK_EI54-16VA_Neutral
 Trafo, Printtrafo, CHK, EI54, 16VA, neutral,http://www.eratransformers.com/product-detail/19
-Trafo Printtrafo CHK EI54 16VA neutral 
+Trafo Printtrafo CHK EI54 16VA neutral
 0
 14
 14
 Transformer_THT
 Transformer_CHK_UI30-4VA_Flat
 Trafo, Flattrafo, CHK, UI30, 4VA,
-Trafo Flattrafo CHK UI30 4VA 
+Trafo Flattrafo CHK UI30 4VA
 0
 16
 16
 Transformer_THT
 Transformer_CHK_UI39-10VA_Flat
 Trafo, Flattrafo, CHK, UI39, 10VA,
-Trafo Flattrafo CHK UI39 10VA 
+Trafo Flattrafo CHK UI39 10VA
 0
 20
 20
 Transformer_THT
 Transformer_Coilcraft_Q4434-B_Rhombus-T1311
 Transformator, Transformer, Flyback, Coilcraft Q4434-B, Rgombus T1311,
-Transformator Transformer Flyback Coilcraft Q4434-B Rgombus T1311 
+Transformator Transformer Flyback Coilcraft Q4434-B Rgombus T1311
 0
 8
 8
 Transformer_THT
 Transformer_EPCOS_B66359A1013T_Horizontal
 Transformer, Transformator, ETD29, 13 Pin, Horizontal, EPCOS-B66359A1013T,
-Transformer Transformator ETD29 13 Pin Horizontal EPCOS-B66359A1013T 
+Transformer Transformator ETD29 13 Pin Horizontal EPCOS-B66359A1013T
 0
 13
 13
 Transformer_THT
 Transformer_EPCOS_B66359J1014T_Vertical
 Transformer, Transformator, ETD29, 14 Pin, Vertical, EPCOS-B66359J1014T,
-Transformer Transformator ETD29 14 Pin Vertical EPCOS-B66359J1014T 
+Transformer Transformator ETD29 14 Pin Vertical EPCOS-B66359J1014T
 0
 14
 14
@@ -89343,7 +89343,7 @@ AUDIO TRAFO LUNDAHL
 Transformer_THT
 Transformer_Myrra_74040_Horizontal
 Transformer, Transformator, ETD29, 13 Pin, Horizontal, Myrra-74040,
-Transformer Transformator ETD29 13 Pin Horizontal Myrra-74040 
+Transformer Transformator ETD29 13 Pin Horizontal Myrra-74040
 0
 13
 13
@@ -89357,91 +89357,91 @@ transformer flyback SMPS
 Transformer_THT
 Transformer_NF_ETAL_1-1_P1200
 NF-Transformer, 1:1, ETAL P1200,http://www.etalgroup.com/sites/default/files/products/P1200_April_2005.pdf
-NF-Transformer 1to1 ETAL P1200 
+NF-Transformer 1to1 ETAL P1200
 0
 4
 4
 Transformer_THT
 Transformer_NF_ETAL_P1165
 NF-Transformer,  ETAL, P1165,http://www.etalgroup.com/sites/default/files/products/P1165_February_2006.pdf
-NF-Transformer ETAL P1165 
+NF-Transformer ETAL P1165
 0
 4
 4
 Transformer_THT
 Transformer_NF_ETAL_P3324
 NF-Transformer, ETAL P3324,http://www.etalgroup.com/sites/default/files/products/P3324_April_2005.pdf
-NF-Transformer ETAL P3324 
+NF-Transformer ETAL P3324
 0
 4
 4
 Transformer_THT
 Transformer_NF_ETAL_P3356
 NF-Transformer, ETAL P3356, http://www.etalgroup.com/sites/default/files/products/P3356_December_2005.pdf
-NF-Transformer ETAL P3356 
+NF-Transformer ETAL P3356
 0
 4
 4
 Transformer_THT
 Transformer_Toroid_Horizontal_D9.0mm_Amidon-T30
 Transformer, Toroid, horizontal, laying, Diameter 9mm, Amidon, T30,
-Transformer Toroid horizontal laying Diameter 9mm Amidon T30 
+Transformer Toroid horizontal laying Diameter 9mm Amidon T30
 0
 4
 4
 Transformer_THT
 Transformer_Toroid_Horizontal_D10.5mm_Amidon-T37
 Transformer, Toroid, horizontal, laying, Diameter 10,5mm, Amidon T37,
-Transformer Toroid horizontal laying Diameter 10 5mm Amidon T37 
+Transformer Toroid horizontal laying Diameter 10 5mm Amidon T37
 0
 4
 4
 Transformer_THT
 Transformer_Toroid_Horizontal_D12.5mm_Amidon-T44
 Transformer, Toroid, horizontal, laying, Diameter 12,5mm, Amidon T44,
-Transformer Toroid horizontal laying Diameter 12 5mm Amidon T44 
+Transformer Toroid horizontal laying Diameter 12 5mm Amidon T44
 0
 4
 4
 Transformer_THT
 Transformer_Toroid_Horizontal_D14.0mm_Amidon-T50
 Transformer, Toroid, horizontal, laying, Diameter 14mm, Amidon T50,
-Transformer Toroid horizontal laying Diameter 14mm Amidon T50 
+Transformer Toroid horizontal laying Diameter 14mm Amidon T50
 0
 4
 4
 Transformer_THT
 Transformer_Toroid_Horizontal_D18.0mm
-Transformer, Toroid, tapped, horizontal, laying, Diameter 18mm, 
-Transformer Toroid tapped horizontal laying Diameter 18mm 
+Transformer, Toroid, tapped, horizontal, laying, Diameter 18mm,
+Transformer Toroid tapped horizontal laying Diameter 18mm
 0
 5
 4
 Transformer_THT
 Transformer_Toroid_Tapped_Horizontal_D9.0mm_Amidon-T30
 Transformer, Toroid, tapped, horizontal, laying, Diameter 9mm, Amidon, T30,
-Transformer Toroid tapped horizontal laying Diameter 9mm Amidon T30 
+Transformer Toroid tapped horizontal laying Diameter 9mm Amidon T30
 0
 6
 6
 Transformer_THT
 Transformer_Toroid_Tapped_Horizontal_D10.5mm_Amidon-T37
 Transformer, Toroid, tapped, horizontal, laying, Diameter 10,5mm, Amidon, T37,
-Transformer Toroid tapped horizontal laying Diameter 10 5mm Amidon T37 
+Transformer Toroid tapped horizontal laying Diameter 10 5mm Amidon T37
 0
 6
 6
 Transformer_THT
 Transformer_Toroid_Tapped_Horizontal_D12.5mm_Amidon-T44
 Transformer, Toroid, tapped, horizontal, laying, Diameter 12,5mm, Amidon, T44,
-Transformer Toroid tapped horizontal laying Diameter 12 5mm Amidon T44 
+Transformer Toroid tapped horizontal laying Diameter 12 5mm Amidon T44
 0
 6
 6
 Transformer_THT
 Transformer_Toroid_Tapped_Horizontal_D14.0mm_Amidon-T50
 Transformer, Toroid, tapped, horizontal, laying, Diameter 14mm, Amidon T50,
-Transformer Toroid tapped horizontal laying Diameter 14mm Amidon T50 
+Transformer Toroid tapped horizontal laying Diameter 14mm Amidon T50
 0
 6
 6

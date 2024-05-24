@@ -1,0 +1,30 @@
+---
+repos:
+  - repo: meta
+    hooks:
+      - id: check-hooks-apply
+      - id: check-useless-excludes
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml
+        files: '.*\.ya?ml$'
+      - id: check-json
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        exclude: '.*\.step$'
+  - repo: https://github.com/pocc/pre-commit-hooks
+    rev: v1.3.5
+    hooks:
+      - id: clang-format
+        args: [--style=Google, -i]
+      - id: cpplint
+  - repo: local
+    hooks:
+      - id: pio-check
+        name: pio-check
+        language: system
+        entry: pio
+        args: [check, --skip-packages]
+        pass_filenames: false
