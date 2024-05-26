@@ -1,9 +1,6 @@
 # Generic 3-screw mounting hardware
 
 ![render](render.png)
-![front](front.png)
-![back](back.png)
-![back with motor](back_motor.png)
 
 This directory contains mounting hardware compatible with many 3 screw motors
 with hole to hole distances of up to 25mm and M1.6x8 to M2x8 fasteners. If the
@@ -18,3 +15,7 @@ It should be pretty print settings agnostic, but you should probably print it
 from at least PETG or other filament with proper heat tolerance as some motors
 can get a bit warm for PLA if you're still tuning them or you're driving them
 hard.
+
+![front](front.jpg)
+![back](back.jpg)
+![back with motor](back_motor.jpg)
