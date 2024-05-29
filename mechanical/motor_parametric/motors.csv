@@ -1,0 +1,4 @@
+motorModel,motorDiameter,motorScrewHoleFromCenter,motorMagnetLength,motorScrewM,motorMagnetDiameter
+EM3215,32,10.5,3.3,1.6,11.5
+PTZ2204,27.90,10.265,2.25,2.0,5
+GB2804,34.5,14.434,7.1,2.0,12.5
