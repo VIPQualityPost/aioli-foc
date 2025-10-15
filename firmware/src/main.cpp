@@ -7,7 +7,6 @@
 #include "./aioli-board.h"
 #include "./drv_reset.h"
 #include "encoders/mt6701/MagneticSensorMT6701SSI.h"
-// #include "./can.cpp"
 
 // Motor specific parameters.
 #define POLEPAIRS 4
@@ -25,14 +24,14 @@ MagneticSensorMT6701SSI enc = MagneticSensorMT6701SSI(ENC_CS);
 Commander commander = Commander(SerialUSB);
 
 uint8_t configureFOC(void);
-uint8_t configureCAN(void);
 uint8_t configureDFU(void);
+extern uint8_t configureCAN(void);
 
 void doMotor(char *cmd) { commander.motor(&motor, cmd); }
 
 void setup() {
-  pinMode(USER_LED, OUTPUT);
-  pinMode(USER_BUTTON, INPUT);
+  pinMode(AIOLI_LED, OUTPUT);
+  pinMode(AIOLI_BUTTON, INPUT);
 
   SerialUSB.begin();
 
